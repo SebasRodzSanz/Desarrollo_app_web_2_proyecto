@@ -1,0 +1,80 @@
+{
+  "autos": [
+      {
+        "id": 1,
+        "marca": "Ford",
+        "modelo": "Mustang Mach-E",
+        "color": "Blanco Metálico",
+        "anio": 2025,
+        "precio": 989000,
+        "tipo": "Eléctrico"
+      },
+      {
+        "id": 2,
+        "marca": "BYD",
+        "modelo": "King",
+        "color": "Gris Metálico",
+        "anio": 2026,
+        "precio": 499800,
+        "tipo": "Eléctrico"
+      },
+      {
+        "id": 3,
+        "marca": "Suzuki",
+        "modelo": "Fronx Boostergreen",
+        "color": "Naranja Metálico",
+        "anio": 2024,
+        "precio": 370000,
+        "tipo": "Eléctrico"
+      },
+      {
+        "id": 4,
+        "marca": "BYD",
+        "modelo": "Sealion 7",
+        "color": "Azul Atlantis",
+        "anio": 2025,
+        "precio": 949800,
+        "tipo": "Eléctrico"
+      },
+      {
+        "id": 5,
+        "marca": "BYD",
+        "modelo": "Dolphin Mini",
+        "color": "Azul Glaciar",
+        "anio": 2026,
+        "precio": 399800,
+        "tipo": "Eléctrico"
+      },
+      {
+        "id": 6,
+        "marca": "Ford",
+        "modelo": "F-150",
+        "color": "Negro Obsidiana",
+        "anio": 2025,
+        "precio": 1008100,
+        "tipo": "Pick Up"
+      },
+      {
+        "id": 7,
+        "marca": "Ford",
+        "modelo": "Lobo Lariat",
+        "color": "Azul Rey",
+        "anio": 2025,
+        "precio": 1428100,
+        "tipo": "Pick Up"
+      },
+      {
+        "id": 8,
+        "marca": "BYD",
+        "modelo": "Shark DMO",
+        "color": "Azul Celeste",
+        "anio": 2024,
+        "precio": 899980,
+        "tipo": "Pick Up"
+      },
+      {
+
+      }
+
+    ]
+  }
