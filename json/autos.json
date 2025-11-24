@@ -73,6 +73,87 @@
         "tipo": "Pick Up"
       },
       {
+    "id": 9,
+    "marca": "Chevrolet",
+    "modelo": "Corvette C8",
+    "color": "Morado",
+    "anio": 2025,
+    "precio": 2300000,
+    "tipo": "Deportivo"
+      },
+      {
+    "id": 10,
+    "marca": "Audi",
+    "modelo": "R8 Coupé V10",
+    "color": "Negro",
+    "anio": 2023,
+    "precio": 4900000,
+    "tipo": "Deportivo"
+     },
+      {
+    "id": 11,
+    "marca": "Chevrolet",
+    "modelo": "Camaro ZL1",
+    "color": "Azul Metálico",
+    "anio": 2024,
+    "precio": 1750000,
+    "tipo": "Deportivo"
+      },
+      {
+    "id": 12,
+    "marca": "Toyota",
+    "modelo": "GR Supra",
+    "color": "Azul Eléctrico",
+    "anio": 2025,
+    "precio": 1350000,
+    "tipo": "Deportivo"
+      },
+      {
+    "id": 13,
+    "marca": "Chevrolet",
+    "modelo": "Tahoe Z71",
+    "color": "Azul Midnight",
+    "anio": 2025,
+    "precio": 1650000,
+    "tipo": "SUV"
+      },
+      {
+    "id": 14,
+    "marca": "Ford",
+    "modelo": "Expedition",
+    "color": "Azul Marino",
+    "anio": 2024,
+    "precio": 1800000,
+    "tipo": "SUV"
+      },
+      {
+    "id": 15,
+    "marca": "Volkswagen",
+    "modelo": "Tiguan R-Line",
+    "color": "Blanco Puro",
+    "anio": 2026,
+    "precio": 850000,
+    "tipo": "SUV"
+     },
+      {
+    "id": 16,
+    "marca": "Ford",
+    "modelo": "Explorer",
+    "color": "Gris Carbón",
+    "anio": 2025,
+    "precio": 1150000,
+    "tipo": "SUV"
+      },
+     {
+    "id": 17,
+    "marca": "Volkswagen",
+    "modelo": "Teramont",
+    "color": "Verde Oliva",
+    "anio": 2025,
+    "precio": 1200000,
+    "tipo": "SUV"
+     }
+      {
 
       }
 
