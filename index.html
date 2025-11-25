@@ -1,56 +1,147 @@
 <!DOCTYPE html>
 <html ng-app="ejemplosApp">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>http-request</title>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>http-request</title>
 
 
-        <!-- Incluir Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
 
-        <!-- Incluir AngularJS -->
-        <script src="js/lib/angular.min.js"></script>
+    <!-- Incluir AngularJS -->
+    <script src="js/lib/angular.min.js"></script>
 
-        <script src="js/app.js"></script>
-        
-    </head>    
+    <script src="js/app.js"></script>
 
-    <body>
+</head>
 
-    <header>      
+<body>
 
-      <div class="container">
-        <h1>Prueba de Carrusel</h1>
-              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="img/banner_1.jpeg" alt="primera">
-              </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="img/banner_2.png" alt="segunda">
+    <div ng-controller="mainCtrl">
+
+        <nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar scroll</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Link
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+
+        <header>
+
+            <div class="container-fluid p-0">
+
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <picture><!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_1.jpeg" media="(orientation: landscape)">
+                                    <source srcset="img/bm1.png" media="(orientation: portrait)">
+                                    <img src="img/banner_1.jpeg" class="d-block w-100" alt="primero">
+                                </picture>
+
+                                <!-- <img src="img/banner_1.jpeg" class="d-block w-100" alt="primero"> -->
+                            </div>
+                            <div class="carousel-item">
+                                <picture> <!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_2.png" media="(orientation: landscape)">
+                                    <source srcset="img/bm2.png" media="(orientation: portrait)">
+                                    <img src="img/banner_2.png" class="d-block w-100" alt="segundo">
+                                </picture>
+                                <!-- <img src="img/banner_2.png" class="d-block w-100" alt="segundo"> -->
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
-        </div>
 
-      </div>
-      </div>
-    </header>
+        </header>
 
-        <div container ng-controller="mainCtrl">
-            
-            <h1>$HTTP Request</h1>
-            <h4>Data dinámica</h4>
-            <hr>
-            
-            {{autos| json}} 
+        <article>
+            <section>
+                <div class="container">
+
+                    <h1>$HTTP Request</h1>
+                    <h4>Data dinámica</h4>
+                    <hr>
+
+                    {{autos| json}}
 
 
-        </div><!-- fin del listadoCtrl -->
+                </div><!-- fin del listadoCtrl -->
+            </section>
+        </article>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+
 </html>
