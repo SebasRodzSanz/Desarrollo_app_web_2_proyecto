@@ -152,7 +152,78 @@
     "anio": 2025,
     "precio": 1200000,
     "tipo": "SUV"
-     }
-
+    },
+    {
+    "id":18,
+    "marca": "Ram",
+    "modelo":"Ram  1500 Classic",
+    "color":"Azul Obscuro",
+    "anio":2024,
+    "precio":974900,
+    "tipo":"Pick up"
+  },
+  {
+    "id":19,
+    "marca":"Ford",
+    "modelo":"Ford  Maverick",
+    "color":"Verde",
+    "anio":2025,
+    "precio":877100,
+    "tipo":"Pick up"
+  },
+  {
+    "id":20,
+    "marca":"Toyota",
+    "modelo":"Yaris Sedán",
+    "color":"Rojo",
+    "anio":2021,
+    "precio":321700,
+    "tipo":"Auto"
+  },
+  {
+    "id":21,
+    "marca":"Toyota",
+    "modelo":"Corolla  HEV",
+    "color":"Grafito",
+    "anio":2025,
+    "precio":509300,
+    "tipo":"Auto"
+  },
+  {
+    "id":22,
+    "marca":"Toyota",
+    "modelo":"Camry Hev",
+    "color":"Blanco",
+    "anio":2024,
+    "precio":619600,
+    "tipo":"Auto"
+  },
+  {
+    "id":23,
+    "marca":"Chevrolet",
+    "modelo":"Aveo Sedán",
+    "color":"Acero Metálico",
+    "anio":2026,
+    "precio":285900,
+    "tipo":"Auto"
+  },
+  {
+    "id":24,
+    "marca":"Chevrolet",
+    "modelo":"Onix",
+    "color":"Negro",
+    "anio":2026,
+    "precio":293100,
+    "tipo":"Auto"
+  },
+  {
+    "id":25,
+    "marca":"Toyota",
+    "modelo":"GR Yaris",
+    "color":"Gris Metal",
+    "anio":2025,
+    "precio":854600,
+    "tipo":"Deportivo"
+  }
     ]
   }
