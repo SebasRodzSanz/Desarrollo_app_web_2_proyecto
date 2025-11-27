@@ -6,15 +6,9 @@
 
 
         <!-- Incluir Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
         <!-- Animate.css -->
         <link rel="stylesheet" href="css/animate.css">
-
-        <!-- Incluir AngularJS -->
-        <script src="js/lib/angular.min.js"></script>
-
-        <script src="js/app.js"></script>
         
     </head>    
     <body>
@@ -27,9 +21,91 @@
             
             {{autos| json}}
 
+            <div class="row">
+                <div class="col-6">
+                    <div class="carousel slide" id="miCarouselCars">
+                        <div class="carousel-inner">
+                            <div class="carousel-item  active">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card" style="width: 25rem;">
+                                            <img class="card-img-top" src="./img/Auto_s3.png" alt="auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title">CAR TITLE</h5>
+                                                <br>
+                                                <a href="#" class="btn btn-primary">Detalles del vehículo</a>
+                                                <a href="#" class="btn btn-primary">Cotizar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card" style="width: 25rem;">
+                                            <img class="card-img-top" src="./img/Auto_s3.png" alt="auto">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">CAR TITLE</h5>
+                                                    <br>
+                                                    <a href="#" class="btn btn-primary">Detalles del vehículo</a>
+                                                    <a href="#" class="btn btn-primary">Cotizar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div> <!-- fin del carousel item-->
+                            <div class="carousel-item">
+                                <div class="card-group">
+                                    <div class="card" >
+                                        <img class="card-img-top" src="./img/Auto_s3.png" alt="auto">
+                                        <div class="card-body">
+                                            <h5 class="card-title">CAR TITLE</h5>
+                                            <br>
+                                            <a href="#" class="btn btn-primary">Detalles del vehículo</a>
+                                            <a href="#" class="btn btn-primary">Cotizar</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/Auto_s3.png" alt="auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title">CAR TITLE</h5>
+                                                <br>
+                                                <a href="#" class="btn btn-primary">Detalles del vehículo</a>
+                                                <a href="#" class="btn btn-primary">Cotizar</a>
+                                            </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="./img/Auto_s5.png" alt="auto">
+                                            <div class="card-body">
+                                                <h5 class="card-title">CAR TITLE</h5>
+                                                <br>
+                                                <a href="#" class="btn btn-primary">Detalles del vehículo</a>
+                                                <a href="#" class="btn btn-primary">Cotizar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div> <!-- fin del carousel item-->
+                        </div> <!-- fin del carousel inner-->
+                    </div> <!-- fin del carousel slide-->
+                </div>  <!-- fin del col -->
+            </div><!-- fin del row  -->
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-success" type="button" data-bs-target="#miCarouselCars" data-bs-slide="prev">
+                        <p>Atras</p>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger" type="button" data-bs-target="#miCarouselCars" data-bs-slide="next">
+                        <p>Siguiente</p>
+                    </button>
+                </div>
+            </div>
 
 
         </div><!-- fin del listadoCtrl -->
 
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+        <script src="./css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

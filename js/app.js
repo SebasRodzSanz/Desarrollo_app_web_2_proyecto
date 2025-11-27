@@ -16,12 +16,7 @@ $http.get('json/autos.json').success (function(data){
 });
 
   
-
-
-
 }]);
-
-
 
 
 
