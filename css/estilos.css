@@ -46,3 +46,54 @@ color:white;
   font-variation-settings:
     "wdth" 100;
 }
+
+/* ===============================
+   SECCIÓN MISIÓN, VISIÓN Y VALORES
+   =============================== */
+
+.seccion-mvv {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.titulo-mvv {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.descripcion-mvv {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta-mvv {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background: whitesmoke;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta-mvv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.subtitulo-mvv {
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.lista-valores {
+    padding-left: 20px;
+}
+
+.lista-valores li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.4;
+}
