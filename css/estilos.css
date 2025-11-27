@@ -1,0 +1,48 @@
+body {
+background: #192336;
+background: radial-gradient(circle,rgba(25, 35, 54, 1) 0%, rgba(41, 50, 69, 1) 30%, rgba(23, 28, 38, 1) 50%, rgba(41, 50, 69, 1) 75%, rgba(0, 0, 0, 1) 100%);
+color:white
+}
+
+.navbar {
+    background-color: #192336;    
+}
+
+.navbar .nav_link{
+color:white;
+}
+
+.logo_nav {
+    width: 50%;    
+}
+
+/* fuentes */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+ */
+.roboto-uniquifier {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* // <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name */
+
+.open-sans-uniquifier {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
