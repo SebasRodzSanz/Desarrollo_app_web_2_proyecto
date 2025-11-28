@@ -42,6 +42,7 @@
                 border-bottom: red 7px solid;
                 color: red;
                 font-weight: bold; 
+                cursor: pointer;
             }
             .links-info{
                 all:unset;
@@ -64,18 +65,10 @@
                 color: #000;
             }
         </style>
-        
     </head>    
     <body>
 
         <div class="container" ng-controller="mainCtrl">
-            
-            <h1>$HTTP Request</h1>
-            <h4>Data dinámica</h4>
-            <hr>
-            
-            {{autos| json}}
-
             <div class="row">
                 <div class="col text-center">
                     <h2>Cada camino comienza aquí</h2>
@@ -86,19 +79,19 @@
                 <div class="col">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a href="#" class="nav-link links-car">Autos</a>
+                            <a  ng-click="autoLinkClick('Auto')" class="nav-link links-car">Autos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link links-car">Deportivos</a>
+                            <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link links-car">Pick ups</a>
+                            <a ng-click="autoLinkClick('Pick Up')" class="nav-link links-car">Pick ups</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link links-car">SUVs</a>
+                            <a ng-click="autoLinkClick('SUV')" class="nav-link links-car">SUVs</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link links-car">Eléctricos</a>
+                            <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
                         </li>
                     </ul>
                 </div>
@@ -106,46 +99,10 @@
             <div class="row">
                 <div class="col">
                     <div class="scroll-container">
-                        <div class="card mx-3 my-3" >
-                            <img class="card-img-top" src="./img/Auto_s1.png" alt="auto">
+                        <div class="card mx-3 my-3" ng-repeat="auto in autosGaleria">
+                            <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
                             <div class="card-body">
-                                    <h5 class="card-title c-title">Yaris Sédan</h5>
-                                    <br>
-                                    <a href="#" class="links-info">Detalles del vehículo</a>
-                                    <a href="#" class="links-info">Cotizar</a>
-                            </div>
-                        </div> <!-- fin del card-->
-                        <div class="card mx-3 my-3" >
-                            <img class="card-img-top" src="./img/Auto_s2.png" alt="auto">
-                            <div class="card-body">
-                                    <h5 class="card-title c-title">CAR TITLE</h5>
-                                    <br>
-                                    <a href="#" class="links-info">Detalles del vehículo</a>
-                                    <a href="#" class="links-info">Cotizar</a>
-                            </div>
-                        </div> <!-- fin del card-->
-                        <div class="card mx-3 my-3" >
-                            <img class="card-img-top" src="./img/Auto_s3.png" alt="auto">
-                            <div class="card-body">
-                                    <h5 class="card-title c-title">CAR TITLE</h5>
-                                    <br>
-                                    <a href="#" class="links-info">Detalles del vehículo</a>
-                                    <a href="#" class="links-info">Cotizar</a>
-                            </div>
-                        </div> <!-- fin del card-->
-                        <div class="card mx-3 my-3" >
-                            <img class="card-img-top" src="./img/Auto_s4.png" alt="auto">
-                            <div class="card-body">
-                                    <h5 class="card-title c-title">CAR TITLE</h5>
-                                    <br>
-                                    <a href="#" class="links-info">Detalles del vehículo</a>
-                                    <a href="#" class="links-info">Cotizar</a>
-                            </div>
-                        </div> <!-- fin del card-->
-                        <div class="card mx-3 my-3" >
-                            <img class="card-img-top" src="./img/Auto_s5.png" alt="auto">
-                            <div class="card-body">
-                                    <h5 class="card-title c-title">CAR TITLE</h5>
+                                    <h5 class="card-title c-title">{{auto.modelo}}</h5>
                                     <br>
                                     <a href="#" class="links-info">Detalles del vehículo</a>
                                     <a href="#" class="links-info">Cotizar</a>
@@ -154,20 +111,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <p class="h4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A rem blanditiis 
-                        voluptas mollitia? Facilis, quos? Autem eum blanditiis cupiditate sunt ullam 
-                        officia facere? Reiciendis cupiditate facere possimus repellendus quod non.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt amet corrupti cum unde. 
-                        In cum incidunt nam! Perspiciatis facere minima distinctio ea alias inventore, 
-                        rem eveniet exercitationem facilis, sunt id.
-                    </p>
-                </div>
-            </div>
-
         </div><!-- fin del listadoCtrl -->
 
         <!-- Incluir AngularJS -->

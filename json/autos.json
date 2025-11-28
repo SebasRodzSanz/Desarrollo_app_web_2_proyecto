@@ -7,7 +7,8 @@
         "color": "Blanco Metálico",
         "anio": 2025,
         "precio": 989000,
-        "tipo": "Eléctrico"
+        "tipo": "Eléctrico",
+        "img":"./img/"
       },
       {
         "id": 2,
@@ -16,7 +17,8 @@
         "color": "Gris Metálico",
         "anio": 2026,
         "precio": 499800,
-        "tipo": "Eléctrico"
+        "tipo": "Eléctrico",
+        "img":"./img/"
       },
       {
         "id": 3,
@@ -25,7 +27,8 @@
         "color": "Naranja Metálico",
         "anio": 2024,
         "precio": 370000,
-        "tipo": "Eléctrico"
+        "tipo": "Eléctrico",
+        "img":"./img/"
       },
       {
         "id": 4,
@@ -34,7 +37,8 @@
         "color": "Azul Atlantis",
         "anio": 2025,
         "precio": 949800,
-        "tipo": "Eléctrico"
+        "tipo": "Eléctrico",
+        "img":"./img/"
       },
       {
         "id": 5,
@@ -43,7 +47,8 @@
         "color": "Azul Glaciar",
         "anio": 2026,
         "precio": 399800,
-        "tipo": "Eléctrico"
+        "tipo": "Eléctrico",
+        "img":"./img/"
       },
       {
         "id": 6,
@@ -52,7 +57,8 @@
         "color": "Negro Obsidiana",
         "anio": 2025,
         "precio": 1008100,
-        "tipo": "Pick Up"
+        "tipo": "Pick Up",
+        "img":"./img/"
       },
       {
         "id": 7,
@@ -61,7 +67,8 @@
         "color": "Azul Rey",
         "anio": 2025,
         "precio": 1428100,
-        "tipo": "Pick Up"
+        "tipo": "Pick Up",
+        "img":"./img/"
       },
       {
         "id": 8,
@@ -70,7 +77,8 @@
         "color": "Azul Celeste",
         "anio": 2024,
         "precio": 899980,
-        "tipo": "Pick Up"
+        "tipo": "Pick Up",
+        "img":"./img/"
       },
       {
     "id": 9,
@@ -79,7 +87,8 @@
     "color": "Morado",
     "anio": 2025,
     "precio": 2300000,
-    "tipo": "Deportivo"
+    "tipo": "Deportivo",
+    "img":"./img/"
       },
       {
     "id": 10,
@@ -88,7 +97,8 @@
     "color": "Negro",
     "anio": 2023,
     "precio": 4900000,
-    "tipo": "Deportivo"
+    "tipo": "Deportivo",
+    "img":"./img/"
      },
       {
     "id": 11,
@@ -97,7 +107,8 @@
     "color": "Azul Metálico",
     "anio": 2024,
     "precio": 1750000,
-    "tipo": "Deportivo"
+    "tipo": "Deportivo",
+    "img":"./img/"
       },
       {
     "id": 12,
@@ -106,7 +117,8 @@
     "color": "Azul Eléctrico",
     "anio": 2025,
     "precio": 1350000,
-    "tipo": "Deportivo"
+    "tipo": "Deportivo",
+    "img":"./img/"
       },
       {
     "id": 13,
@@ -115,7 +127,8 @@
     "color": "Azul Midnight",
     "anio": 2025,
     "precio": 1650000,
-    "tipo": "SUV"
+    "tipo": "SUV",
+    "img":"./img/"
       },
       {
     "id": 14,
@@ -124,7 +137,8 @@
     "color": "Azul Marino",
     "anio": 2024,
     "precio": 1800000,
-    "tipo": "SUV"
+    "tipo": "SUV",
+    "img":"./img/"
       },
       {
     "id": 15,
@@ -133,7 +147,8 @@
     "color": "Blanco Puro",
     "anio": 2026,
     "precio": 850000,
-    "tipo": "SUV"
+    "tipo": "SUV",
+    "img":"./img/"
      },
       {
     "id": 16,
@@ -142,7 +157,8 @@
     "color": "Gris Carbón",
     "anio": 2025,
     "precio": 1150000,
-    "tipo": "SUV"
+    "tipo": "SUV",
+    "img":"./img/"
       },
      {
     "id": 17,
@@ -151,7 +167,8 @@
     "color": "Verde Oliva",
     "anio": 2025,
     "precio": 1200000,
-    "tipo": "SUV"
+    "tipo": "SUV",
+    "img":"./img/"
     },
     {
     "id":18,
@@ -160,7 +177,8 @@
     "color":"Azul Obscuro",
     "anio":2024,
     "precio":974900,
-    "tipo":"Pick up"
+    "tipo":"Pick Up",
+    "img":"./img/pick_up_s1.png"
   },
   {
     "id":19,
@@ -169,7 +187,8 @@
     "color":"Verde",
     "anio":2025,
     "precio":877100,
-    "tipo":"Pick up"
+    "tipo":"Pick Up",
+    "img":"./img/pick_up_s2.png"
   },
   {
     "id":20,
@@ -178,7 +197,8 @@
     "color":"Rojo",
     "anio":2021,
     "precio":321700,
-    "tipo":"Auto"
+    "tipo":"Auto",
+    "img":"./img/auto_s1.png"
   },
   {
     "id":21,
@@ -187,7 +207,8 @@
     "color":"Grafito",
     "anio":2025,
     "precio":509300,
-    "tipo":"Auto"
+    "tipo":"Auto",
+    "img":"./img/auto_s2.png"
   },
   {
     "id":22,
@@ -196,7 +217,8 @@
     "color":"Blanco",
     "anio":2024,
     "precio":619600,
-    "tipo":"Auto"
+    "tipo":"Auto",
+    "img":"./img/auto_s3.png"
   },
   {
     "id":23,
@@ -205,7 +227,8 @@
     "color":"Acero Metálico",
     "anio":2026,
     "precio":285900,
-    "tipo":"Auto"
+    "tipo":"Auto",
+    "img":"./img/auto_s4.png"
   },
   {
     "id":24,
@@ -214,7 +237,8 @@
     "color":"Negro",
     "anio":2026,
     "precio":293100,
-    "tipo":"Auto"
+    "tipo":"Auto",
+    "img":"./img/auto_s5.png"
   },
   {
     "id":25,
@@ -223,7 +247,8 @@
     "color":"Gris Metal",
     "anio":2025,
     "precio":854600,
-    "tipo":"Deportivo"
+    "tipo":"Deportivo",
+    "img":"./img/deportivo_s1.png"
   }
     ]
   }
