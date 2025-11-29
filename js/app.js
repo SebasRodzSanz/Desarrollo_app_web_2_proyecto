@@ -15,7 +15,7 @@ $http.get('json/autos.json').success (function(data){
 // a los profesores
     $scope.autos = data.autos;
     $scope.autoLinkClick();
-    console.log($scope.autosGaleria);
+    // console.log($scope.autosGaleria);
 
 });
 

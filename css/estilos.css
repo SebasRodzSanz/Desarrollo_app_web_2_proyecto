@@ -185,7 +185,7 @@ color:white;
     color: #000;
 }
 .scroll-container{
-    background-color: #fff;
+    background-color: #f9f9f9;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
@@ -205,14 +205,14 @@ color:white;
     margin-right: 30px;
     padding: 7px;
     color: #000;
-    border-bottom: #fff 7px solid;
-    background:#fff;
+    border-bottom: #f9f9f9 7px solid;
+    background:#f9f9f9;
     font-size: 20px;
 }
 
 .links-car:hover{
-    border-bottom: red 7px solid;
-    color: red;
+    border-bottom: #D93030 7px solid;
+    color: #D93030;
     font-weight: bold; 
     cursor: pointer;
 }
@@ -228,7 +228,7 @@ color:white;
 
 }
 .links-info:hover{
-    color: #8d1818;
+    color: #D93030;
     font-weight: bolder;
 }
 .c-title{
