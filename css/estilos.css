@@ -97,3 +97,80 @@ color:white;
     color: #444;
     line-height: 1.4;
 }
+
+/* =====================================
+   FOOTER SCOTT MOTORS — ROJO & BLANCO
+   Combinación de diseño minimalista + 4 columnas
+   ===================================== */
+
+.footer-scott {
+    background-color: #171C26;  /* Rojo corporativo */
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* LOGO */
+.footer-scott .footer-logo {
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+/* TITULOS */
+.footer-scott .footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+/* TEXTO */
+.footer-scott .footer-text {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* LISTAS GENERALES */
+.footer-scott .footer-links,
+.footer-scott .footer-info,
+.footer-scott .footer-social {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-scott .footer-links li,
+.footer-scott .footer-info li,
+.footer-scott .footer-social li {
+    margin-bottom: 8px;
+}
+
+/* ENLACES */
+.footer-scott .footer-links a,
+.footer-scott .footer-social a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-scott .footer-links a:hover,
+.footer-scott .footer-social a:hover {
+    color: #D93030;
+    padding-left: 4px;
+}
+
+/* REDES SOCIALES (ICONOS) */
+.footer-scott .footer-social i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* DIVISOR */
+.footer-scott .footer-divider {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* COPYRIGHT */
+.footer-scott .footer-copy {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
