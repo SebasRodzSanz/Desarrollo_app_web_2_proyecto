@@ -1,121 +1,401 @@
 <!DOCTYPE html>
 <html ng-app="ejemplosApp">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>http-request</title>
 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>http-request</title>
+    </head>
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="./css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Incluir Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
 
-        <style>
-            .scroll-container{
-                background-color: #fff;
-                overflow: auto;
-                white-space: nowrap;
-                padding: 10px;
-                scroll-behavior:smooth;
-                /*Ocultar el scrollbar horizontal*/
-                -ms-overflow-style:none;/*IE y EDGE */
-                scrollbar-width:none; /*FIREFOX  */
-            }
-            .scroll-container::-webkit-scrollbar {
-                display: none; /* Chrome, Safari */
-            }
+    <!-- Animate.css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--INCLUIR LOGOS REDES SOCIALES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-            .card{
-                display: inline-block;
-            }
-            .links-car{
-                margin-left: 30px;
-                margin-right: 30px;
-                padding: 7px;
-                color: #000;
-                border-bottom: #fff 7px solid;
-                background:#fff;
-                font-size: 20px;
-            }
+    <!-- Incluir AngularJS -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/app.js"></script>
 
-            .links-car:hover{
-                border-bottom: red 7px solid;
-                color: red;
-                font-weight: bold; 
-                cursor: pointer;
-            }
-            .links-info{
-                all:unset;
-                text-decoration: none;
-                cursor: pointer;
-                margin-right: 40px;
-                font-size: 20px;
-                padding: 5px;
-                color: #f12525;
-                font-weight: normal;
+    <!-- Incluir Css -->
+    <link rel="stylesheet" href="css/estilos.css">
 
-            }
-            .links-info:hover{
-                color: #8d1818;
-                font-weight: bolder;
-            }
-            .c-title{
-                font-size: 30px;
-                font-weight: bolder;
-                color: #000;
-            }
-        </style>
-    </head>    
-    <body>
+    <!--   Incluir Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        <div class="container" ng-controller="mainCtrl">
-            <div class="row">
-                <div class="col text-center">
-                    <h2>Cada camino comienza aquí</h2>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2">
+
+</head>
+
+<body>
+
+    <div ng-controller="mainCtrl">
+<!--Aqui hice una modificacion porque al momento de contraer el menu en "hambuerguesa" no se distinguia ya que era del mismo color que el menú-->
+        <nav>
+            <nav class="navbar navbar-expand-lg  navbar-dark bebas-neue-regular" style="font-size: 150%;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                                    Modelos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                                    Servicios
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#" style="color:white">Sobre
+                                    Nosotros</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </nav>
+        </nav>
 
-            <div class="row">
-                <div class="col">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a  ng-click="autoLinkClick('Auto')" class="nav-link links-car">Autos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a ng-click="autoLinkClick('Pick Up')" class="nav-link links-car">Pick ups</a>
-                        </li>
-                        <li class="nav-item">
-                            <a ng-click="autoLinkClick('SUV')" class="nav-link links-car">SUVs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="scroll-container">
-                        <div class="card mx-3 my-3" ng-repeat="auto in autosGaleria">
-                            <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
-                            <div class="card-body">
-                                    <h5 class="card-title c-title">{{auto.modelo}}</h5>
-                                    <br>
-                                    <a href="#" class="links-info">Detalles del vehículo</a>
-                                    <a href="#" class="links-info">Cotizar</a>
+        <header>
+
+            <div class="container-fluid p-0">
+
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <picture><!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_1.jpeg" media="(orientation: landscape)">
+                                    <source srcset="img/bm1.jpeg" media="(orientation: portrait)">
+                                    <img src="img/banner_1.jpeg" class="d-block w-100" alt="primero">
+                                </picture>
+
+
                             </div>
-                        </div> <!-- fin del card-->
+                            <div class="carousel-item">
+                                <picture> <!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_2.png" media="(orientation: landscape)">
+                                    <source srcset="img/bm2.png" media="(orientation: portrait)">
+                                    <img src="img/banner_2.png" class="d-block w-100" alt="segundo">
+                                </picture>
+
+                            </div>
+                            <div class="carousel-item">
+                                <picture> <!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_3.jpeg" media="(orientation: landscape)">
+                                    <source srcset="img/bm3.jpeg" media="(orientation: portrait)">
+                                    <img src="img/banner_3.jpeg" class="d-block w-100" alt="tercero">
+                                </picture>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </header>
+
+        <article>
+
+            <!-- Carrusel de Autos Sebas  -->
+            <section class="seccion-gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="gallery-title">Cada camino comienza aquí</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a  ng-click="autoLinkClick('Auto')" class="nav-link links-car">Autos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Pick Up')" class="nav-link links-car">Pick ups</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('SUV')" class="nav-link links-car">SUVs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="scroll-container">
+                                <div class="card mx-3 my-3" ng-repeat="auto in autosGaleria">
+                                <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
+                                    <div class="card-body">
+                                            <h5 class="card-title c-title">{{auto.modelo}}</h5>
+                                            <br>
+                                            <a href="#" class="links-info">Detalles del vehículo</a>
+                                            <a href="#" class="links-info">Cotizar</a>
+                                    </div>
+                                </div> <!-- fin del card-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- fin del listadoCtrl -->
+            </section>
+
+            <!-- Carrusel de Servicios Néstor -->
+            <section></section>
+
+            <!-- Quienes somos Mariana -->
+            <section></section>
+
+            <!-- Misión, Visión y Valores Miguel -->
+    <section id="mision-vision-valores" class="seccion-mvv">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="titulo-mvv bebas-neue-regular animar animate__animated">Misión, Visión y Valores</h2>
+            <p class="descripcion-mvv">
+                En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
+                además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y clases.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Misión -->
+            <div class="col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="subtitulo-mvv text-center mb-3">Misión</h4>
+                        <p>
+                            Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de calidad
+                            y servicios de mantenimiento profesional, brindando una experiencia cercana, segura
+                            y transparente a cada cliente.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div><!-- fin del listadoCtrl -->
 
-        <!-- Incluir AngularJS -->
-        <script src="js/lib/angular.min.js"></script>
-        <script src="./css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+            <!-- Visión -->
+            <div class="col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="subtitulo-mvv text-center mb-3">Visión</h4>
+                        <p>
+                            Convertirnos en la agencia automotriz de referencia en la región, destacando por nuestra
+                            atención al cliente, diversidad de autos sedán, pickups, SUV’s y deportivos, y un taller
+                            altamente especializado para todas las marcas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="subtitulo-mvv text-center mb-3">Valores</h4>
+                        <ul class="lista-valores">
+                            <li><strong>Honestidad:</strong> transparencia total en precios y servicios.</li>
+                            <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y después.</li>
+                            <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
+                            <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
+                            <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        </article>
+    </div>
+
+
+</footer>
+<footer class="footer-scott pt-5 pb-4 mt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- Columna 1: Logo + Nombre -->
+            <div class="col-md-3 mb-4 text-center text-md-start">
+                <a href="#"><img src="img/smlogo_small.png" class="footer-logo mb-2" alt="Scott Motors" width="70"></a>
+                <h5 class="footer-title mt-2">Scott Motors</h5>
+                </p>
+            </div>
+
+            <!-- Columna 2: Menú -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Menú</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Modelos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Síguenos</h5>
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Contacto -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Contacto</h5>
+                <ul class="footer-info">
+                    <li>📞 55 0000 0000</li>
+                    <li>📧 contacto@scottmotors.com</li>
+                    <li>📍 CDMX, México</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <p class="footer-copy text-center mt-3">
+            © 2025 Scott Motors — Calidad y confianza en movimiento.
+        </p>
+    </div>
+</footer>
+
+
+
+
+
+<!--animacion para scroll de mision, vision y valores-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const elementos = document.querySelectorAll(".animar");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+
+            // Si está visible en pantalla
+            if (entry.isIntersecting) {
+
+                // Quitar cualquier animación previa
+                entry.target.classList.remove("animate__fadeInDown", "animate__zoomIn");
+
+                // Forzar reflow para reiniciar animación
+                void entry.target.offsetWidth;
+
+                // Aplicar animación según el tipo de elemento
+                if (entry.target.tagName === "H2") {
+                    entry.target.classList.add("animate__fadeInDown");
+                } else {
+                    entry.target.classList.add("animate__zoomIn");
+                }
+
+            } else {
+                // Cuando sale de pantalla, quitar animación
+                entry.target.classList.remove("animate__fadeInDown", "animate__zoomIn");
+            }
+
+        });
+    }, { threshold: 0.3 });
+
+    elementos.forEach(el => observer.observe(el));
+
+});
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+
+<!-- Footer Néstor -->
+<footer></footer>
+
 </html>

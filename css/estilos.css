@@ -1,0 +1,239 @@
+body {
+background: #192336;
+background: radial-gradient(circle,rgba(25, 35, 54, 1) 0%, rgba(41, 50, 69, 1) 30%, rgba(23, 28, 38, 1) 50%, rgba(41, 50, 69, 1) 75%, rgba(0, 0, 0, 1) 100%);
+color:white
+}
+
+.navbar {
+    background-color: #192336;    
+}
+
+.navbar .nav_link{
+color:white;
+}
+
+.logo_nav {
+    width: 50%;    
+}
+
+/* fuentes */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+ */
+.roboto-uniquifier {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* // <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name */
+
+.open-sans-uniquifier {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* ===============================
+   SECCIÓN MISIÓN, VISIÓN Y VALORES
+   =============================== */
+
+.seccion-mvv {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.titulo-mvv {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.descripcion-mvv {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta-mvv {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background: whitesmoke;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta-mvv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.subtitulo-mvv {
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.lista-valores {
+    padding-left: 20px;
+}
+
+.lista-valores li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* =====================================
+   FOOTER SCOTT MOTORS — ROJO & BLANCO
+   Combinación de diseño minimalista + 4 columnas
+   ===================================== */
+
+.footer-scott {
+    background-color: #171C26;  /* Rojo corporativo */
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* LOGO */
+.footer-scott .footer-logo {
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+/* TITULOS */
+.footer-scott .footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+/* TEXTO */
+.footer-scott .footer-text {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* LISTAS GENERALES */
+.footer-scott .footer-links,
+.footer-scott .footer-info,
+.footer-scott .footer-social {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-scott .footer-links li,
+.footer-scott .footer-info li,
+.footer-scott .footer-social li {
+    margin-bottom: 8px;
+}
+
+/* ENLACES */
+.footer-scott .footer-links a,
+.footer-scott .footer-social a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-scott .footer-links a:hover,
+.footer-scott .footer-social a:hover {
+    color: #D93030;
+    padding-left: 4px;
+}
+
+/* REDES SOCIALES (ICONOS) */
+.footer-scott .footer-social i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* DIVISOR */
+.footer-scott .footer-divider {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* COPYRIGHT */
+.footer-scott .footer-copy {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/*
+    Cars gallery horizontal 
+*/
+.seccion-gallery {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+.gallery-title{
+    color: #000;
+}
+.scroll-container{
+    background-color: #fff;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    scroll-behavior:smooth;
+    /*Ocultar el scrollbar horizontal*/
+    -ms-overflow-style:none;/*IE y EDGE */
+    scrollbar-width:none; /*FIREFOX  */
+}
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.card{
+    display: inline-block;
+}
+.links-car{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 7px;
+    color: #000;
+    border-bottom: #fff 7px solid;
+    background:#fff;
+    font-size: 20px;
+}
+
+.links-car:hover{
+    border-bottom: red 7px solid;
+    color: red;
+    font-weight: bold; 
+    cursor: pointer;
+}
+.links-info{
+    all:unset;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 20px;
+    padding: 5px;
+    color: #f12525;
+    font-weight: normal;
+
+}
+.links-info:hover{
+    color: #8d1818;
+    font-weight: bolder;
+}
+.c-title{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000;
+}
+
