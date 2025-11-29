@@ -98,6 +98,63 @@ color:white;
     line-height: 1.4;
 }
 
+/* ===============================
+   SECCIÓN ABOUT US 
+   =============================== */
+.titulo-abus {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 30px 0 40px 0;
+}
+
+.subtitulo-abus {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.lista-tarjetas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarjeta-lista {
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  position: relative;
+}
+
+.numero-tarjeta {
+ position: absolute; 
+  top: 10px;
+  right: 20px;
+  font-size: 60px;
+  font-weight: bold;  
+  /* z-index: 0; */
+}
+
+.tarjeta-lista h3,
+.tarjeta-lista p {
+  position: relative;
+  z-index: 1;
+}
+
+.tarjeta-lista:hover {
+  transform: translateY(-8px); /* se levanta hacia arriba */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* sombra ligera */
+}
+
+
+.descripcion-abus {
+    font-size: 1.3rem;
+    color: #ffffff;    
+    margin: 0 auto 50px auto;
+}
+
 /* =====================================
    FOOTER SCOTT MOTORS — ROJO & BLANCO
    Combinación de diseño minimalista + 4 columnas
