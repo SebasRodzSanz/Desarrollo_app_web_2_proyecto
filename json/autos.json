@@ -8,7 +8,7 @@
         "anio": 2025,
         "precio": 989000,
         "tipo": "Eléctrico",
-        "img":"./img/"
+        "img":"./img/auto_s1.png"
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "anio": 2026,
         "precio": 499800,
         "tipo": "Eléctrico",
-        "img":"./img/"
+        "img":"./img/auto_s2.png"
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "anio": 2024,
         "precio": 370000,
         "tipo": "Eléctrico",
-        "img":"./img/"
+        "img":"./img/auto_s3.png"
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "anio": 2025,
         "precio": 949800,
         "tipo": "Eléctrico",
-        "img":"./img/"
+        "img":"./img/auto_s4.png"
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "anio": 2026,
         "precio": 399800,
         "tipo": "Eléctrico",
-        "img":"./img/"
+        "img":"./img/auto_s5.png"
       },
       {
         "id": 6,
