@@ -249,6 +249,8 @@ color:white;
 }
 .gallery-title{
     color: #000;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
 }
 .scroll-container{
     background-color: #f9f9f9;
@@ -274,6 +276,7 @@ color:white;
     border-bottom: #f9f9f9 7px solid;
     background:#f9f9f9;
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 .links-car:hover{
@@ -291,6 +294,7 @@ color:white;
     padding: 5px;
     color: #f12525;
     font-weight: normal;
+    font-family: "Open Sans", sans-serif;
 
 }
 .links-info:hover{
@@ -301,6 +305,7 @@ color:white;
     font-size: 30px;
     font-weight: bolder;
     color: #000;
+    font-family: "Roboto", sans-serif;
 }
 
 /* =======================
