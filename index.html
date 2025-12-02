@@ -52,61 +52,106 @@
     <div ng-controller="mainCtrl">
         <!--Aqui hice una modificacion porque al momento de contraer el menu en "hambuerguesa" no se distinguia ya que era del mismo color que el menú-->
         <nav>
-            <nav class="navbar navbar-expand-lg  navbar-dark bebas-neue-regular" style="font-size: 150%;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-                            style="--bs-scroll-height: 100px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bebas-neue-regular" style="font-size: 150%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
+            </a>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
-                                    Modelos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
-                                    Servicios
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#" style="color:white">Sobre
-                                    Nosotros</a>
-                            </li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+
+                <!-- Menú principal -->
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                    style="--bs-scroll-height: 100px;">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" style="color:white" data-bs-toggle="dropdown">
+                            Modelos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-light" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </nav>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" style="color:white" data-bs-toggle="dropdown">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color:white">Sobre Nosotros</a>
+                    </li>
+
+                </ul>
+
+                <!-- Contacto al extremo derecho -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link bebas-neue-regularcontacto"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalContacto">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</nav>
+<!-- Modal Contacto (Propuesta 1)--> 
+ 
+<div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-contacto-dark">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Contáctanos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control input-dark" placeholder="Tu nombre completo">
+
+                    <label class="form-label mt-3">Teléfono</label>
+                    <input type="tel" class="form-control input-dark" placeholder="Ej. 55 1234 5678">
+
+                    <label class="form-label mt-3">Correo</label>
+                    <input type="email" class="form-control input-dark" placeholder="tucorreo@example.com">
+
+                    <label class="form-label mt-3">¿Qué deseas?</label>
+                    <select class="form-select input-dark">
+                        <option>Cita presencial</option>
+                        <option>Información de un vehículo</option>
+                        <option>Agendar cita para servicio</option>
+                    </select>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger w-100">Enviar solicitud</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
         <header>
 
@@ -290,77 +335,69 @@
             </section>
 
             <!-- Misión, Visión y Valores Miguel -->
-            <section id="mision-vision-valores" class="seccion-mvv">
-                <div class="container">
+<section id="mision-vision-valores" class="seccion-mvv">
+    <div class="container">
 
-                    <div class="text-center mb-4">
-                        <h2 class="titulo-mvv bebas-neue-regular animar animate__animated">Misión, Visión y Valores</h2>
-                        <p class="descripcion-mvv">
-                            En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
-                            además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y
-                            clases.
+        <div class="text-center mb-4">
+            <h1 class="titulo-mvv bebas-neue-regular animar animate__animated">
+                Misión, Visión y Valores
+            </h1>
+            <p class="open-sans-uniquifier text-black animar animate__animated">
+                En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
+                además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y clases.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Misión -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="text-center mb-3 roboto-uniquifier">Misión</h4>
+                        <p class="open-sans-uniquifier">
+                            Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de
+                            calidad y servicios de mantenimiento profesional, brindando una experiencia
+                            cercana, segura y transparente a cada cliente.
                         </p>
                     </div>
-
-                    <div class="row g-4">
-
-                        <!-- Misión -->
-                        <div class="col-md-4">
-                            <div class="card tarjeta-mvv h-100 animar animate__animated">
-                                <div class="card-body">
-                                    <h4 class="subtitulo-mvv text-center mb-3">Misión</h4>
-                                    <p>
-                                        Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de
-                                        calidad
-                                        y servicios de mantenimiento profesional, brindando una experiencia cercana,
-                                        segura
-                                        y transparente a cada cliente.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Visión -->
-                        <div class="col-md-4">
-                            <div class="card tarjeta-mvv h-100 animar animate__animated">
-                                <div class="card-body">
-                                    <h4 class="subtitulo-mvv text-center mb-3">Visión</h4>
-                                    <p>
-                                        Convertirnos en la agencia automotriz de referencia en la región, destacando por
-                                        nuestra
-                                        atención al cliente, diversidad de autos sedán, pickups, SUV’s y deportivos, y
-                                        un taller
-                                        altamente especializado para todas las marcas.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Valores -->
-                        <div class="col-md-4">
-                            <div class="card tarjeta-mvv h-100 animar animate__animated">
-                                <div class="card-body">
-                                    <h4 class="subtitulo-mvv text-center mb-3">Valores</h4>
-                                    <ul class="lista-valores">
-                                        <li><strong>Honestidad:</strong> transparencia total en precios y servicios.
-                                        </li>
-                                        <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y
-                                            después.</li>
-                                        <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
-                                        <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
-                                        <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
-            </section>
+            </div>
 
-        </article>
+            <!-- Visión -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="text-center mb-3 roboto-uniquifier">Visión</h4>
+                        <p class="open-sans-uniquifier">
+                            Convertirnos en la agencia automotriz de referencia en la región, destacando por
+                            nuestra atención al cliente, diversidad de autos sedán, pickups, SUV’s y deportivos,
+                            y un taller altamente especializado para todas las marcas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card tarjeta-mvv h-100 animar animate__animated">
+                    <div class="card-body">
+                        <h4 class="roboto-uniquifier text-center mb-3">Valores</h4>
+                        <ul class="lista-valores open-sans-uniquifier">
+                            <li><strong>Honestidad:</strong> transparencia total en precios y servicios.</li>
+                            <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y después.</li>
+                            <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
+                            <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
+                            <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+</section>
 
 
     </footer>
