@@ -198,7 +198,7 @@
     "anio":2021,
     "precio":321700,
     "tipo":"Auto",
-    "img":"./img/auto_s1.png"
+    "img":"./img/auto_18.png"
   },
   {
     "id":21,
@@ -208,7 +208,7 @@
     "anio":2025,
     "precio":509300,
     "tipo":"Auto",
-    "img":"./img/auto_s2.png"
+    "img":"./img/auto_19.png"
   },
   {
     "id":22,
@@ -218,7 +218,7 @@
     "anio":2024,
     "precio":619600,
     "tipo":"Auto",
-    "img":"./img/auto_s3.png"
+    "img":"./img/auto_20.png"
   },
   {
     "id":23,
@@ -228,7 +228,7 @@
     "anio":2026,
     "precio":285900,
     "tipo":"Auto",
-    "img":"./img/auto_s4.png"
+    "img":"./img/auto_21.png"
   },
   {
     "id":24,
@@ -238,7 +238,7 @@
     "anio":2026,
     "precio":293100,
     "tipo":"Auto",
-    "img":"./img/auto_s5.png"
+    "img":"./img/auto_22.png"
   },
   {
     "id":25,
