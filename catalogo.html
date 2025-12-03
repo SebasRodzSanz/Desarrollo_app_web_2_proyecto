@@ -18,7 +18,17 @@
                 Nombre:    
                 <br> 
                 <input type="text" ng-model="busqueda.nombre" class="form-control" placeholder="Buscar por Nombre">
-
+                Filtros
+                <br>
+                <select class="form-control" ng-model="busqueda.sexo">
+                    <option value="">Cualquiera</option>
+                    <option value="marca">Suzuki</option>
+                    <option value="color">Color</option>
+                    <option value="anio">Año</option>
+                    <option value="precio">Precio</option>
+                    <option value="tipo">Tipo</option>
+                </select>
+                
                 Tipos de vehiculo:
             <div class="vehiculo-opciones">
             <label>
@@ -60,7 +70,7 @@
             font-weight: 500;
             }
             </style>
-        
+
 
 
             </div>
