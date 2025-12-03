@@ -112,7 +112,7 @@
     </nav>
 </nav>
 <!--Filtros -->
-        <div class="row filtros-bar" ng-controller="listadoCtrl">
+        <div class="row filtros-bar" >
 
                 <div class="filtro-izq">
                     <label>Nombre Modelo:</label><br>
@@ -121,8 +121,9 @@
                 <br>
                 <div class="filtro-der">
                     <label>Filtros:</label><br>
-                    <select class="form-control" ng-model="busqueda.sexo">
+                    <select class="form-control" ng-model="busqueda.auto">
                         <option value="">Cualquiera</option>
+                        <option value="tipos">tipos de vehiculo</option>
                         <option value="marca">Marca</option>
                         <option value="color">Color</option>
                         <option value="anio">Año</option>
@@ -132,13 +133,13 @@
                 </div>
                 
                 <label>Tipos de vehículo:</label>
-                    <div class="vehiculo-opciones">
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value=""> Todos</label>
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value="Autos"> Autos</label>
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value="Deportivos"> Deportivos</label>
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value="Pick ups"> Pick ups</label>
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value="SUVs"> SUVs</label>
-                    <label><input type="radio" ng-model="busqueda.vehiculo" value="Electricos"> Eléctricos</label>
+                    <div class="autos-opciones">
+                    <label><input type="radio" ng-model="busqueda.auto" value=""> Todos</label>
+                    <label><input type="radio" ng-model="busqueda.auto" value="Autos"> Autos</label>
+                    <label><input type="radio" ng-model="busqueda.auto" value="Deportivos"> Deportivos</label>
+                    <label><input type="radio" ng-model="busqueda.auto" value="Pick ups"> Pick ups</label>
+                    <label><input type="radio" ng-model="busqueda.auto" value="SUVs"> SUVs</label>
+                    <label><input type="radio" ng-model="busqueda.auto" value="Electricos"> Eléctricos</label>
                 </div>
 
             <style>
@@ -221,7 +222,7 @@
         <!-- cars list  -->
         <div class="row justify-content-center">
             <div class="col-11 justify-content-center">
-                <div class="card mx-2 my-2 card_list"  ng-repeat="auto in autos">
+                <div class="card mx-2 my-2 card_list" ng-repeat="auto in autos">
                     <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
                     <div class="card-body">
                         <h5 class="card-title c-title-list">{{auto.modelo}}</h5>
