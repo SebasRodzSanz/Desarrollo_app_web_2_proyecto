@@ -307,6 +307,47 @@ color:white;
     color: #000;
     font-family: "Roboto", sans-serif;
 }
+/*
+    List cars html
+*/
+.card_list{
+    display: inline-block;
+    width: 27rem;
+    background-color:#171C26;
+    
+}
+.card_list:hover{
+    box-shadow: 0 8px 20px rgba(217, 48, 48, 0.70); /* sombra ligera */
+}
+.card_list img{
+    width: 27rem;
+    height:18rem;
+}
+.c-title-list{
+    color:#D93030;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Roboto", sans-serif;
+}
+.c-list-txt{
+    color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+}
+.item-txt{
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    color:#f9f9f9;
+    
+    background: #171C26;
+    border-bottom: #171C26;
+}
+.item-txt:hover{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 5px solid #D93030;
+    cursor: pointer;
+}
 
 /* =======================
    popup propuesta 1
