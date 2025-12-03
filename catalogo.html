@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="row">
+
+                Nombre:    
+                <br> 
+                <input type="text" ng-model="busqueda.nombre" class="form-control" placeholder="Buscar por Nombre">
+
+                Tipos de vehiculo:
+            <div class="vehiculo-opciones">
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="">
+                    Todos
+            </label>
+
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="Autos">
+                    Autos
+            </label>
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="Deportivos">
+                    Deportivos
+            </label>
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="Pick ups">
+                    Pick ups
+            </label>
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="SUVs">
+                    SUVs
+            </label>
+            <label>
+                <input type="radio" ng-model="busqueda.vehiculo" value="Electricos">
+                    Eléctricos
+            </label>
+            </div>
+
+            <style>
+            .vehiculo-opciones {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            }
+
+            .vehiculo-opciones label {
+            cursor: pointer;
+            font-weight: 500;
+            }
+            </style>
+        
+
+
+            </div>
+    </body>
+</html>

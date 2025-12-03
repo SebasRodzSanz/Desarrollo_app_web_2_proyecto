@@ -52,106 +52,61 @@
     <div ng-controller="mainCtrl">
         <!--Aqui hice una modificacion porque al momento de contraer el menu en "hambuerguesa" no se distinguia ya que era del mismo color que el menú-->
         <nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bebas-neue-regular" style="font-size: 150%;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
-            </a>
+            <nav class="navbar navbar-expand-lg  navbar-dark bebas-neue-regular" style="font-size: 150%;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarScroll">
-
-                <!-- Menú principal -->
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-                    style="--bs-scroll-height: 100px;">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" style="color:white" data-bs-toggle="dropdown">
-                            Modelos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                                    Modelos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                                    Servicios
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#" style="color:white">Sobre
+                                    Nosotros</a>
+                            </li>
                         </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" style="color:white" data-bs-toggle="dropdown">
-                            Servicios
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" style="color:white">Sobre Nosotros</a>
-                    </li>
-
-                </ul>
-
-                <!-- Contacto al extremo derecho -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link bebas-neue-regularcontacto"
-                            href="#"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modalContacto">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</nav>
-<!-- Modal Contacto (Propuesta 1)--> 
- 
-<div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content modal-contacto-dark">
-
-            <div class="modal-header">
-                <h5 class="modal-title">Contáctanos</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-                <form>
-
-                    <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control input-dark" placeholder="Tu nombre completo">
-
-                    <label class="form-label mt-3">Teléfono</label>
-                    <input type="tel" class="form-control input-dark" placeholder="Ej. 55 1234 5678">
-
-                    <label class="form-label mt-3">Correo</label>
-                    <input type="email" class="form-control input-dark" placeholder="tucorreo@example.com">
-
-                    <label class="form-label mt-3">¿Qué deseas?</label>
-                    <select class="form-select input-dark">
-                        <option>Cita presencial</option>
-                        <option>Información de un vehículo</option>
-                        <option>Agendar cita para servicio</option>
-                    </select>
-
-                </form>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-danger w-100">Enviar solicitud</button>
-            </div>
-
-        </div>
-    </div>
-</div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </nav>
 
         <header>
 
@@ -220,7 +175,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
-                            <h2 class="gallery-title animar animate__animated">Cada camino comienza aquí</h2>
+                            <h2 class="gallery-title">Cada camino comienza aquí</h2>
                         </div>
                     </div>
 
@@ -231,7 +186,7 @@
                                     <a ng-click="autoLinkClick('Auto')" class="nav-link links-car">Autos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
+                                    <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a ng-click="autoLinkClick('Pick Up')" class="nav-link links-car">Pick ups</a>
@@ -240,7 +195,7 @@
                                     <a ng-click="autoLinkClick('SUV')" class="nav-link links-car">SUVs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
+                                    <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
                                 </li>
                             </ul>
                         </div>
@@ -264,7 +219,87 @@
             </section>
 
             <!-- Carrusel de Servicios Néstor -->
-            <section></section>
+            <section class="seccion-gallery mt-5">
+                <div class="container">
+
+                <!-- Título -->
+                <div class="row">
+                    <div class="col text-center">
+                    <h2 class="gallery-title">Servicios Profesionales</h2>
+                    </div>
+                </div>
+
+        <!-- Carrusel -->
+        <div class="row">
+            <div class="col">
+                <div id="carouselServicios" class="carousel slide">
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0"
+                            class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <!-- Servicio 1 -->
+                        <div class="carousel-item active">
+                            <picture>
+                                <source srcset="img/s1c.jpg" media="(orientation: landscape)"> <!--compu -->
+                                <source srcset="img/s1m.jpg" media="(orientation: portrait)"> <!--cel -->
+                                <img src="img/servicio1_landscape.jpg" class="d-block w-100" alt="Mantenimiento">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mantenimiento General</h5>
+                                <p>Revisión, cambio de aceite y afinación completa.</p>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 2 -->
+                        <div class="carousel-item">
+                            <picture>
+                                <source srcset="img/s2c.jpg" media="(orientation: landscape)">
+                                <source srcset="img/s2m.jpg" media="(orientation: portrait)">
+                                <img src="img/servicio2_landscape.jpg" class="d-block w-100" alt="Pintura">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Limpieza profunda</h5>
+                                <p>Limpieza profunda, pulido y detallado profesional.</p>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 3 -->
+                        <div class="carousel-item">
+                            <picture>
+                                <source srcset="img/s3c.jpg" media="(orientation: landscape)">
+                                <source srcset="img/s3m.jpg" media="(orientation: portrait)">
+                                <img src="img/servicio3_landscape.jpg" class="d-block w-100" alt="Estética">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Restauración de autos</h5>
+                                <p>Trae tu auto viejo para darle su segunda gloria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+            </section>
 
             <!-- Quienes somos Mariana -->
             <section>
@@ -335,69 +370,77 @@
             </section>
 
             <!-- Misión, Visión y Valores Miguel -->
-<section id="mision-vision-valores" class="seccion-mvv">
-    <div class="container">
+            <section id="mision-vision-valores" class="seccion-mvv">
+                <div class="container">
 
-        <div class="text-center mb-4">
-            <h1 class="titulo-mvv bebas-neue-regular animar animate__animated">
-                Misión, Visión y Valores
-            </h1>
-            <p class="open-sans-uniquifier text-black animar animate__animated">
-                En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
-                además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y clases.
-            </p>
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Misión -->
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="card tarjeta-mvv h-100 animar animate__animated">
-                    <div class="card-body">
-                        <h4 class="text-center mb-3 roboto-uniquifier">Misión</h4>
-                        <p class="open-sans-uniquifier">
-                            Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de
-                            calidad y servicios de mantenimiento profesional, brindando una experiencia
-                            cercana, segura y transparente a cada cliente.
+                    <div class="text-center mb-4">
+                        <h2 class="titulo-mvv bebas-neue-regular animar animate__animated">Misión, Visión y Valores</h2>
+                        <p class="descripcion-mvv">
+                            En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
+                            además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y
+                            clases.
                         </p>
                     </div>
-                </div>
-            </div>
 
-            <!-- Visión -->
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="card tarjeta-mvv h-100 animar animate__animated">
-                    <div class="card-body">
-                        <h4 class="text-center mb-3 roboto-uniquifier">Visión</h4>
-                        <p class="open-sans-uniquifier">
-                            Convertirnos en la agencia automotriz de referencia en la región, destacando por
-                            nuestra atención al cliente, diversidad de autos sedán, pickups, SUV’s y deportivos,
-                            y un taller altamente especializado para todas las marcas.
-                        </p>
+                    <div class="row g-4">
+
+                        <!-- Misión -->
+                        <div class="col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="subtitulo-mvv text-center mb-3">Misión</h4>
+                                    <p>
+                                        Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de
+                                        calidad
+                                        y servicios de mantenimiento profesional, brindando una experiencia cercana,
+                                        segura
+                                        y transparente a cada cliente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visión -->
+                        <div class="col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="subtitulo-mvv text-center mb-3">Visión</h4>
+                                    <p>
+                                        Convertirnos en la agencia automotriz de referencia en la región, destacando por
+                                        nuestra
+                                        atención al cliente, diversidad de autos sedán, pickups, SUV’s y deportivos, y
+                                        un taller
+                                        altamente especializado para todas las marcas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Valores -->
+                        <div class="col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="subtitulo-mvv text-center mb-3">Valores</h4>
+                                    <ul class="lista-valores">
+                                        <li><strong>Honestidad:</strong> transparencia total en precios y servicios.
+                                        </li>
+                                        <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y
+                                            después.</li>
+                                        <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
+                                        <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
+                                        <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
-            </div>
+            </section>
 
-            <!-- Valores -->
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="card tarjeta-mvv h-100 animar animate__animated">
-                    <div class="card-body">
-                        <h4 class="roboto-uniquifier text-center mb-3">Valores</h4>
-                        <ul class="lista-valores open-sans-uniquifier">
-                            <li><strong>Honestidad:</strong> transparencia total en precios y servicios.</li>
-                            <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y después.</li>
-                            <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
-                            <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
-                            <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
+        </article>
     </div>
-</section>
 
 
     </footer>
@@ -503,7 +546,6 @@
     </div>
 </body>
 
-<!-- Footer Néstor -->
-<footer></footer>
+
 
 </html>

@@ -22,15 +22,6 @@ color:white;
   font-weight: 400;
   font-style: normal;
 }
-/*NAVBAR CONTACTO*/
-.bebas-neue-regularcontacto {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #D93030 !important;
-  letter-spacing: 1px;
-  font-size: 30px;
-}
 
 /* // <weight>: Use a value from 100 to 900
 // <uniquifier>: Use a unique and descriptive class name
@@ -249,8 +240,6 @@ color:white;
 }
 .gallery-title{
     color: #000;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 40px;
 }
 .scroll-container{
     background-color: #f9f9f9;
@@ -276,7 +265,6 @@ color:white;
     border-bottom: #f9f9f9 7px solid;
     background:#f9f9f9;
     font-size: 20px;
-    font-family: "Roboto", sans-serif;
 }
 
 .links-car:hover{
@@ -294,7 +282,6 @@ color:white;
     padding: 5px;
     color: #f12525;
     font-weight: normal;
-    font-family: "Open Sans", sans-serif;
 
 }
 .links-info:hover{
@@ -305,45 +292,5 @@ color:white;
     font-size: 30px;
     font-weight: bolder;
     color: #000;
-    font-family: "Roboto", sans-serif;
 }
 
-/* =======================
-   popup propuesta 1
-   ======================= */
-
-.modal-contacto-dark {
-    background-color: #171C26;
-    color: #FFFFFF;
-    border-radius: 12px;
-    border: 2px solid #D93030; 
-}
-
-.modal-contacto-dark .modal-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.input-dark {
-    background-color: #0f131a;
-    border: 1px solid #333;
-    color: #FFFFFF;
-}
-
-.input-dark:focus {
-    border-color: #D93030;
-    box-shadow: 0 0 5px #D93030;
-}
-
-.btn-danger {
-    background-color: #D93030 !important;
-    border: none;
-    color: #FFFFFF;
-}
-
-.btn-danger:hover {
-    background-color: #b32525 !important;
-}
-
-.btn-close-white {
-    filter: invert(1);
-}
