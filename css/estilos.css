@@ -1,59 +1,104 @@
-body {
-background: #192336;
-background: radial-gradient(circle,rgba(25, 35, 54, 1) 0%, rgba(41, 50, 69, 1) 30%, rgba(23, 28, 38, 1) 50%, rgba(41, 50, 69, 1) 75%, rgba(0, 0, 0, 1) 100%);
-color:white
+/* Estilos Generales */
+
+nav,#about_us, .carousel {
+    background:
+
+        linear-gradient(135deg,
+            #000814,
+            #1a2a40);
+
+    background-blend-mode: overlay;
+    color: white
 }
 
-.navbar {
-    background-color: #192336;    
+nav .navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* justo en el borde inferior */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* altura del difuminado */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            /* empieza semi-transparente */
+            rgba(255, 0, 0, 0.319)
+            /* se desvanece a transparente */
+        );
+    pointer-events: none;
 }
 
-.navbar .nav_link{
-color:white;
+.card {
+  border-radius: 10px; /* ajusta el valor según lo redondeado que quieras */
+}
+
+/* Estilos del Navar */
+
+nav.navbar {
+    position: relative;
+    /* mantiene la posición relativa */
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8),
+            rgba(29, 29, 29, 0.134),
+            rgba(0, 0, 0, 0.3))
+}
+
+.navbar .nav_link {
+    color: white;
+}
+
+.navbar li {
+    margin-right: 25px;
+    /* espacio entre cada link */
+    font-size: 30px;
 }
 
 .logo_nav {
-    width: 50%;    
+    width: 50%;
 }
+
 
 /* fuentes */
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 /*NAVBAR CONTACTO*/
 .bebas-neue-regularcontacto {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #D93030 !important;
-  letter-spacing: 1px;
-  font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f12525 !important;
+    letter-spacing: 1px;
+    font-size: 30px;
 }
 
 /* // <weight>: Use a value from 100 to 900
 // <uniquifier>: Use a unique and descriptive class name
  */
 .roboto-uniquifier {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 /* // <weight>: Use a value from 300 to 800
 // <uniquifier>: Use a unique and descriptive class name */
 
 .open-sans-uniquifier {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 /* ===============================
@@ -84,12 +129,12 @@ color:white;
     padding: 20px;
     transition: all 0.3s ease;
     background: whitesmoke;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .tarjeta-mvv:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .subtitulo-mvv {
@@ -123,61 +168,138 @@ color:white;
 }
 
 .lista-tarjetas {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .tarjeta-lista {
-  border: 2px solid white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: transparent;
-  position: relative;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    position: relative;
 }
 
 .numero-tarjeta {
- position: absolute; 
-  top: 10px;
-  right: 20px;
-  font-size: 60px;
-  font-weight: bold;  
-  /* z-index: 0; */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 60px;
+    font-weight: bold;
+    /* z-index: 0; */
 }
 
 .tarjeta-lista h3,
 .tarjeta-lista p {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .tarjeta-lista:hover {
-  transform: translateY(-8px); /* se levanta hacia arriba */
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15); /* sombra ligera */
+    transform: translateY(-8px);
+    /* se levanta hacia arriba */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    /* sombra ligera */
 }
 
 
 .descripcion-abus {
     font-size: 1.3rem;
-    color: #ffffff;    
+    color: #ffffff;
     margin: 0 auto 50px auto;
 }
+
+/* RESPONSIVE FORZADO */
+
+/* Solo en orientación vertical (portrait) */
+@media screen and (orientation: portrait) {
+
+    .img_about_us {
+        margin: auto;
+    }
+
+    div .sobre_nosotros {
+        flex-direction: column;
+        /* apila imagen y tarjetas en vertical */
+        align-items: center;
+        object-fit: cover;
+        /* ajusta la imagen sin deformarla */
+
+    }
+
+    .lista-tarjetas {
+        display: block;
+        /* aparecen debajo de la imagen */
+        margin-top: 50px;
+        /* espacio entre imagen y tarjetas */
+    }
+}
+
+.img_about_us {
+    margin-right: 50px;
+}
+
+
+/*
+
+/* Boton scroll-to-top button */
+.btn-top {
+  position: fixed;
+  bottom: 20px;   /* distancia desde el borde inferior */
+  right: 20px;    /* distancia desde el borde derecho */
+  background-color: #f12525; /* azul oscuro metálico */
+  color: white;
+  border: none;
+  border-radius: 10%; /* círculo */
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* oculto por defecto */
+  z-index: 1000;
+}
+
 
 /* =====================================
    FOOTER SCOTT MOTORS — ROJO & BLANCO
    Combinación de diseño minimalista + 4 columnas
    ===================================== */
 
+.footer-scott::after {
+    content: "";
+    position: absolute;
+    bottom: 1;
+    /* justo en el borde inferior */    
+    width: 100%;
+    height: 25px;
+    /* altura del difuminado */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            /* empieza semi-transparente */
+            rgba(255, 0, 0, 0.319)
+            /* se desvanece a transparente */
+        );
+    pointer-events: none;
+}
+
 .footer-scott {
-    background-color: #171C26;  /* Rojo corporativo */
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8),
+            rgba(29, 29, 29, 0.134),
+            rgba(0, 0, 0, 0.3)),
+        linear-gradient(135deg,
+            #000814,
+            #1a2a40);
+    
     color: #ffffff;
     font-size: 0.95rem;
 }
 
 /* LOGO */
 .footer-scott .footer-logo {
-    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
 }
 
 /* TITULOS */
@@ -247,46 +369,55 @@ color:white;
     padding: 60px 0;
     background-color: #f9f9f9;
 }
-.gallery-title{
+
+.gallery-title {
     color: #000;
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
 }
-.scroll-container{
+
+.scroll-container {
     background-color: #f9f9f9;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     /*Ocultar el scrollbar horizontal*/
-    -ms-overflow-style:none;/*IE y EDGE */
-    scrollbar-width:none; /*FIREFOX  */
+    -ms-overflow-style: none;
+    /*IE y EDGE */
+    scrollbar-width: none;
+    /*FIREFOX  */
 }
+
 .scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
+    /* Chrome, Safari */
 }
-.card{
+
+.card {
     display: inline-block;
 }
-.links-car{
+
+.links-car {
     margin-left: 30px;
     margin-right: 30px;
     padding: 7px;
     color: #000;
     border-bottom: #f9f9f9 7px solid;
-    background:#f9f9f9;
+    background: #f9f9f9;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
 }
 
-.links-car:hover{
+.links-car:hover {
     border-bottom: #D93030 7px solid;
     color: #D93030;
-    font-weight: bold; 
+    font-weight: bold;
     cursor: pointer;
 }
-.links-info{
-    all:unset;
+
+.links-info {
+    all: unset;
     text-decoration: none;
     cursor: pointer;
     margin-right: 40px;
@@ -297,11 +428,13 @@ color:white;
     font-family: "Open Sans", sans-serif;
 
 }
-.links-info:hover{
+
+.links-info:hover {
     color: #D93030;
     font-weight: bolder;
 }
-.c-title{
+
+.c-title {
     font-size: 30px;
     font-weight: bolder;
     color: #000;
@@ -316,7 +449,7 @@ color:white;
     background-color: #171C26;
     color: #FFFFFF;
     border-radius: 12px;
-    border: 2px solid #D93030; 
+    border: 2px solid #D93030;
 }
 
 .modal-contacto-dark .modal-header {
