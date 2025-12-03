@@ -45,7 +45,7 @@
         <nav>
             <nav class="navbar navbar-expand-lg navbar-dark bebas-neue-regular" style="font-size: 150%;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="./index.html">
                         <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
                     </a>
 
@@ -61,30 +61,22 @@
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" style="color:white"
-                                    data-bs-toggle="dropdown">
-                                    Modelos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" style="color:white"
-                                    data-bs-toggle="dropdown">
-                                    Servicios
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                </ul>
-                            </li>
-
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" style="color:white">Sobre Nosotros</a>
+                                <a class="nav-link active" href="./cars_list_test.html" style="color:white">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#product_lines" style="color:white">Líneas
+                                    de
+                                    Autos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#about_us" style="color:white">Sobre
+                                    Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#mision-vision-valores"
+                                    style="color:white">
+                                    Nuestros Valores</a>
                             </li>
 
                         </ul>
@@ -104,14 +96,56 @@
             </nav>
         </nav>
 
+        <!-- Modal Contacto (Propuesta 1)-->
+
+        <div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-contacto-dark">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contáctanos</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control input-dark" placeholder="Tu nombre completo">
+
+                            <label class="form-label mt-3">Teléfono</label>
+                            <input type="tel" class="form-control input-dark" placeholder="Ej. 55 1234 5678">
+
+                            <label class="form-label mt-3">Correo</label>
+                            <input type="email" class="form-control input-dark" placeholder="tucorreo@example.com">
+
+                            <label class="form-label mt-3">¿Qué deseas?</label>
+                            <select class="form-select input-dark">
+                                <option>Cita presencial</option>
+                                <option>Información de un vehículo</option>
+                                <option>Agendar cita para servicio</option>
+                            </select>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger w-100">Enviar solicitud</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
 
         <section>
             <div class="container">
                 <div class="row filtros-bar open-sans-uniquifier text-center" style="margin-top: 40px;">
 
-                        <h1 class="titulo-mvv bebas-neue-regular animar animate__animated" style="color: white;">
-                            Catálogo de Autos
-                        </h1>
+                    <h1 class="titulo-mvv bebas-neue-regular animar animate__animated" style="color: white;">
+                        Catálogo de Autos
+                    </h1>
 
                     <div class="filtro-izq">
                         <label>Barra de búsqueda</label><br>
@@ -170,7 +204,8 @@
 
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-12 justify-content-center">
-                        <div class="card justify-content-center mx-2 my-2 card_list" ng-repeat="auto in autos | filter:filtroAutos" style="margin-left:auto;">
+                        <div class="card justify-content-center mx-2 my-2 card_list"
+                            ng-repeat="auto in autos | filter:filtroAutos" style="margin-left:auto;">
                             <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
                             <div class="card-body">
                                 <h5 class="card-title c-title-list">{{auto.modelo}}</h5>
@@ -194,34 +229,44 @@
 
 
 
-        <footer class="footer-scott pt-5 pb-4 mt-5">
+        <footer class="footer-scott pt-5 pb-4 mt-5" style="margin:0">
             <div class="container">
                 <div class="row">
 
+                    <!-- Columna 1: Logo + Nombre -->
                     <div class="col-md-3 mb-4 text-center text-md-start">
-                        <a href="#"><img src="img/smlogo_small.png" class="footer-logo mb-2" alt="Scott Motors"
-                                width="70"></a>
+                        <a href="./index.html"><img src="img/smlogo_small.png" class="footer-logo mb-2"
+                                alt="Scott Motors" width="70"></a>
                         <h5 class="footer-title mt-2">Scott Motors</h5>
+                        </p>
                     </div>
 
+                    <!-- Columna 2: Menú -->
                     <div class="col-md-3 mb-4">
                         <h5 class="footer-title">Menú</h5>
                         <ul class="footer-links">
-                            <li><a href="#">Modelos</a></li>
-                            <li><a href="#">Servicios</a></li>
-                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="./cars_list_test.html">Catálogo</a></li>
+                            <li><a href="./index.html#product_lines">Línea de Productos</a></li>
+                            <li><a href="./index.html#about_us">Sobre Nosotros</a></li>
+                            <li><a href="./index.html#mision-vision-valores">Nuestros Valores</a></li>
                         </ul>
                     </div>
 
+                    <!-- Columna 3: Redes sociales -->
                     <div class="col-md-3 mb-4">
                         <h5 class="footer-title">Síguenos</h5>
                         <ul class="footer-social">
-                            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                            <li><a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                            <li><a href="https://www.facebook.com/share/1Cn1AuSspM/?mibextid=wwXIfr"><i
+                                        class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a
+                                    href="https://www.instagram.com/scottmotors_mexico/?igsh=MTkwenQzb3NiejN4MQ%3D%3D&utm_source=qr"><i
+                                        class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@scottmotors_mxico?_r=1&_t=ZS-91v1baXmYeC"><i
+                                        class="fa-brands fa-tiktok"></i> TikTok</a></li>
                         </ul>
                     </div>
 
+                    <!-- Columna 4: Contacto -->
                     <div class="col-md-3 mb-4">
                         <h5 class="footer-title">Contacto</h5>
                         <ul class="footer-info">
