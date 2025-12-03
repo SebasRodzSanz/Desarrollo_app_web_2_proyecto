@@ -388,3 +388,31 @@ color:white;
 .btn-close-white {
     filter: invert(1);
 }
+
+/*
+    filters style
+*/
+.filtros-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.filtro-izq,
+.filtro-der {
+    width: 25%;
+}
+
+.filtro-centro {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio-botones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
