@@ -1,6 +1,9 @@
 /* Estilos Generales */
 
-nav,#about_us, .carousel {
+nav,
+#about_us,
+.carousel,
+.catalogo {
     background:
 
         linear-gradient(135deg,
@@ -30,7 +33,8 @@ nav .navbar::after {
 }
 
 .card {
-  border-radius: 10px; /* ajusta el valor según lo redondeado que quieras */
+    border-radius: 10px;
+    /* ajusta el valor según lo redondeado que quieras */
 }
 
 /* Estilos del Navar */
@@ -151,6 +155,7 @@ nav.navbar {
     color: #444;
     line-height: 1.4;
 }
+
 /* RESPONSIVE FORZADO */
 @media (max-width: 767.98px) {
     #mision-vision-valores .col-12 {
@@ -260,18 +265,23 @@ SECCIÓN ABOUT US
 
 /* Boton scroll-to-top button */
 .btn-top {
-  position: fixed;
-  bottom: 20px;   /* distancia desde el borde inferior */
-  right: 20px;    /* distancia desde el borde derecho */
-  background-color: #f12525; /* azul oscuro metálico */
-  color: white;
-  border: none;
-  border-radius: 10%; /* círculo */
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  display: none; /* oculto por defecto */
-  z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    /* distancia desde el borde inferior */
+    right: 20px;
+    /* distancia desde el borde derecho */
+    background-color: #f12525;
+    /* azul oscuro metálico */
+    color: white;
+    border: none;
+    border-radius: 10%;
+    /* círculo */
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    /* oculto por defecto */
+    z-index: 1000;
 }
 
 
@@ -284,7 +294,7 @@ SECCIÓN ABOUT US
     content: "";
     position: absolute;
     bottom: 1;
-    /* justo en el borde inferior */    
+    /* justo en el borde inferior */
     width: 100%;
     height: 25px;
     /* altura del difuminado */
@@ -306,7 +316,7 @@ SECCIÓN ABOUT US
         linear-gradient(135deg,
             #000814,
             #1a2a40);
-    
+
     color: #ffffff;
     font-size: 0.95rem;
 }
@@ -454,42 +464,59 @@ SECCIÓN ABOUT US
     color: #000;
     font-family: "Roboto", sans-serif;
 }
+
 /*
     List cars html
 */
-.card_list{
+@media screen and (orientation: portrait) {
+    .card .card_list {
+        display: block;
+        flex-direction: column;  
+        align-items: center;
+        object-fit: cover;  
+        margin-left: 90px;
+    }
+}
+
+.card_list {
     display: inline-block;
-    width: 27rem;
-    background-color:#171C26;
-    
+    width: 26rem;
+    background-color: #171C26;
 }
-.card_list:hover{
-    box-shadow: 0 8px 20px rgba(217, 48, 48, 0.70); /* sombra ligera */
+
+.card_list:hover {
+    box-shadow: 0 8px 20px rgba(217, 48, 48, 0.70);
+    /* sombra ligera */
 }
-.card_list img{
-    width: 27rem;
-    height:18rem;
+
+.card_list img {
+    width: 26rem;
+    height: 18rem;
 }
-.c-title-list{
-    color:#D93030;
+
+.c-title-list {
+    color: #D93030;
     font-size: 30px;
     font-weight: bolder;
     font-family: "Roboto", sans-serif;
 }
-.c-list-txt{
+
+.c-list-txt {
     color: #f9f9f9;
     font-family: "Open Sans", sans-serif;
     font-size: 22px;
 }
-.item-txt{
+
+.item-txt {
     font-family: "Open Sans", sans-serif;
     font-size: 17px;
-    color:#f9f9f9;
-    
+    color: #f9f9f9;
+
     background: #171C26;
     border-bottom: #171C26;
 }
-.item-txt:hover{
+
+.item-txt:hover {
     font-size: 18px;
     font-weight: bold;
     border-bottom: 5px solid #D93030;
