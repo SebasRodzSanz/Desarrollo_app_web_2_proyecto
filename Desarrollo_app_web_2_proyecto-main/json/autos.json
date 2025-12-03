@@ -1,0 +1,254 @@
+{
+  "autos": [
+      {
+        "id": 1,
+        "marca": "Ford",
+        "modelo": "Mustang Mach-E",
+        "color": "Blanco Metálico",
+        "anio": 2025,
+        "precio": 989000,
+        "tipo": "Eléctrico",
+        "img":"./img/auto_1.png"
+      },
+      {
+        "id": 2,
+        "marca": "BYD",
+        "modelo": "King",
+        "color": "Gris Metálico",
+        "anio": 2026,
+        "precio": 499800,
+        "tipo": "Eléctrico",
+        "img":"./img/auto_2.png"
+      },
+      {
+        "id": 3,
+        "marca": "Suzuki",
+        "modelo": "Fronx Boostergreen",
+        "color": "Naranja Metálico",
+        "anio": 2024,
+        "precio": 370000,
+        "tipo": "Eléctrico",
+        "img":"./img/auto_3.png"
+      },
+      {
+        "id": 4,
+        "marca": "BYD",
+        "modelo": "Sealion 7",
+        "color": "Azul Atlantis",
+        "anio": 2025,
+        "precio": 949800,
+        "tipo": "Eléctrico",
+        "img":"./img/auto_4.png"
+      },
+      {
+        "id": 5,
+        "marca": "BYD",
+        "modelo": "Dolphin Mini",
+        "color": "Azul Glaciar",
+        "anio": 2026,
+        "precio": 399800,
+        "tipo": "Eléctrico",
+        "img":"./img/auto_5.png"
+      },
+      {
+        "id": 6,
+        "marca": "Ford",
+        "modelo": "F-150",
+        "color": "Negro Obsidiana",
+        "anio": 2025,
+        "precio": 1008100,
+        "tipo": "Pick Up",
+        "img":"./img/auto_6.png"
+      },
+      {
+        "id": 7,
+        "marca": "Ford",
+        "modelo": "Lobo Lariat",
+        "color": "Azul Rey",
+        "anio": 2025,
+        "precio": 1428100,
+        "tipo": "Pick Up",
+        "img":"./img/auto_7.png"
+      },
+      {
+        "id": 8,
+        "marca": "BYD",
+        "modelo": "Shark DMO",
+        "color": "Azul Celeste",
+        "anio": 2024,
+        "precio": 899980,
+        "tipo": "Pick Up",
+        "img":"./img/auto_8.png"
+      },
+      {
+    "id": 9,
+    "marca": "Chevrolet",
+    "modelo": "Corvette C8",
+    "color": "Morado",
+    "anio": 2025,
+    "precio": 2300000,
+    "tipo": "Deportivo",
+    "img":"./img/auto_9.png"
+      },
+      {
+    "id": 10,
+    "marca": "Audi",
+    "modelo": "R8 Coupé V10",
+    "color": "Negro",
+    "anio": 2023,
+    "precio": 4900000,
+    "tipo": "Deportivo",
+    "img":"./img/auto_10.png"
+     },
+      {
+    "id": 11,
+    "marca": "Chevrolet",
+    "modelo": "Camaro ZL1",
+    "color": "Azul Metálico",
+    "anio": 2024,
+    "precio": 1750000,
+    "tipo": "Deportivo",
+    "img":"./img/auto_11.png"
+      },
+      {
+    "id": 12,
+    "marca": "Toyota",
+    "modelo": "GR Supra",
+    "color": "Azul Eléctrico",
+    "anio": 2025,
+    "precio": 1350000,
+    "tipo": "Deportivo",
+    "img":"./img/auto_12.png"
+      },
+      {
+    "id": 13,
+    "marca": "Chevrolet",
+    "modelo": "Tahoe Z71",
+    "color": "Azul Midnight",
+    "anio": 2025,
+    "precio": 1650000,
+    "tipo": "SUV",
+    "img":"./img/auto_13.png"
+      },
+      {
+    "id": 14,
+    "marca": "Ford",
+    "modelo": "Expedition",
+    "color": "Azul Marino",
+    "anio": 2024,
+    "precio": 1800000,
+    "tipo": "SUV",
+    "img":"./img/auto_14.png"
+      },
+      {
+    "id": 15,
+    "marca": "Volkswagen",
+    "modelo": "Tiguan R-Line",
+    "color": "Blanco Puro",
+    "anio": 2026,
+    "precio": 850000,
+    "tipo": "SUV",
+    "img":"./img/auto_15.png"
+     },
+      {
+    "id": 16,
+    "marca": "Ford",
+    "modelo": "Explorer",
+    "color": "Gris Carbón",
+    "anio": 2025,
+    "precio": 1150000,
+    "tipo": "SUV",
+    "img":"./img/auto_16.png"
+      },
+     {
+    "id": 17,
+    "marca": "Volkswagen",
+    "modelo": "Teramont",
+    "color": "Verde Oliva",
+    "anio": 2025,
+    "precio": 1200000,
+    "tipo": "SUV",
+    "img":"./img/auto_17.png"
+    },
+    {
+    "id":18,
+    "marca": "Ram",
+    "modelo":"Ram  1500 Classic",
+    "color":"Azul Obscuro",
+    "anio":2024,
+    "precio":974900,
+    "tipo":"Pick Up",
+    "img":"./img/pick_up_s1.png"
+  },
+  {
+    "id":19,
+    "marca":"Ford",
+    "modelo":"Ford  Maverick",
+    "color":"Verde",
+    "anio":2025,
+    "precio":877100,
+    "tipo":"Pick Up",
+    "img":"./img/pick_up_s2.png"
+  },
+  {
+    "id":20,
+    "marca":"Toyota",
+    "modelo":"Yaris Sedán",
+    "color":"Rojo",
+    "anio":2021,
+    "precio":321700,
+    "tipo":"Auto",
+    "img":"./img/auto_18.png"
+  },
+  {
+    "id":21,
+    "marca":"Toyota",
+    "modelo":"Corolla  HEV",
+    "color":"Grafito",
+    "anio":2025,
+    "precio":509300,
+    "tipo":"Auto",
+    "img":"./img/auto_19.png"
+  },
+  {
+    "id":22,
+    "marca":"Toyota",
+    "modelo":"Camry Hev",
+    "color":"Blanco",
+    "anio":2024,
+    "precio":619600,
+    "tipo":"Auto",
+    "img":"./img/auto_20.png"
+  },
+  {
+    "id":23,
+    "marca":"Chevrolet",
+    "modelo":"Aveo Sedán",
+    "color":"Acero Metálico",
+    "anio":2026,
+    "precio":285900,
+    "tipo":"Auto",
+    "img":"./img/auto_21.png"
+  },
+  {
+    "id":24,
+    "marca":"Chevrolet",
+    "modelo":"Onix",
+    "color":"Negro",
+    "anio":2026,
+    "precio":293100,
+    "tipo":"Auto",
+    "img":"./img/auto_22.png"
+  },
+  {
+    "id":25,
+    "marca":"Toyota",
+    "modelo":"GR Yaris",
+    "color":"Gris Metal",
+    "anio":2025,
+    "precio":854600,
+    "tipo":"Deportivo",
+    "img":"./img/deportivo_s1.png"
+  }
+    ]
+  }

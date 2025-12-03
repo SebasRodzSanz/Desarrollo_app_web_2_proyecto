@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html ng-app="ejemplosApp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Catálogo</title>
+</head>
+
+<!-- Incluir Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- Logos redes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AngularJS -->
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- Estilos -->
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300..800&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="catalogo">
+
+    <div ng-controller="mainCtrl">
+
+        <!--Aqui hice una modificacion porque al momento de contraer el menu en "hambuerguesa" no se distinguia ya que era del mismo color que el menú-->
+        <nav>
+            <nav class="navbar navbar-expand-lg navbar-dark bebas-neue-regular" style="font-size: 150%;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+
+                        <!-- Menú principal -->
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./cars_list_test.html" style="color:white">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#product_lines" style="color:white">Líneas
+                                    de
+                                    Autos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#about_us" style="color:white">Sobre
+                                    Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#mision-vision-valores"
+                                    style="color:white">
+                                    Nuestros Valores</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- Contacto al extremo derecho -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link bebas-neue-regularcontacto" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalContacto">
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </nav>
+
+        <!-- Modal Contacto (Propuesta 1)-->
+
+        <div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-contacto-dark">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contáctanos</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control input-dark" placeholder="Tu nombre completo">
+
+                            <label class="form-label mt-3">Teléfono</label>
+                            <input type="tel" class="form-control input-dark" placeholder="Ej. 55 1234 5678">
+
+                            <label class="form-label mt-3">Correo</label>
+                            <input type="email" class="form-control input-dark" placeholder="tucorreo@example.com">
+
+                            <label class="form-label mt-3">¿Qué deseas?</label>
+                            <select class="form-select input-dark">
+                                <option>Cita presencial</option>
+                                <option>Información de un vehículo</option>
+                                <option>Agendar cita para servicio</option>
+                            </select>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger w-100">Enviar solicitud</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <section>
+            <div class="container">
+                <div class="row filtros-bar open-sans-uniquifier text-center" style="margin-top: 40px;">
+
+                    <h1 class="titulo-mvv bebas-neue-regular animar animate__animated" style="color: white;">
+                        Catálogo de Autos
+                    </h1>
+
+                    <div class="filtro-izq">
+                        <label>Barra de búsqueda</label><br>
+                        <input type="text" ng-model="busqueda.modelo" class="form-control"
+                            placeholder="{{ placeholderBusqueda }}">
+                    </div>
+
+
+                    <div class="filtro-centro">
+                        <label>&nbsp;</label> <!-- alineación -->
+
+                        <div class="precio-botones">
+                            <!-- Botón para mostrar slider -->
+                            <button class="btn btn-danger btn-sm" ng-click="activarPrecio()">Precio</button>
+
+                            <!-- Botón para ordenar por precio -->
+                            <button class="btn btn-secondary btn-sm" ng-click="ordenarPrecio()">↑↓</button>
+                        </div>
+
+                        <!-- Slider -->
+                        <div ng-show="busqueda.filtroPrecioActivo" style="width:220px; margin-top:5px;">
+                            <label><b>Máximo:</b> {{ busqueda.precioMax | currency:'MXN$' }}</label>
+                            <input type="range" min="{{precioMin}}" max="{{precioMax}}" ng-model="busqueda.precioMax"
+                                class="form-range">
+                        </div>
+                    </div>
+
+
+                    <div class="filtro-der">
+                        <label>Filtros:</label><br>
+                        <select class="form-control" ng-model="busqueda.auto">
+                            <option value="">Cualquiera</option>
+                            <option value="marca">Marca</option>
+                            <option value="color">Color</option>
+                            <option value="anio">Año</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="vehiculos-header">
+                    <label class="vehiculos-titulo">Tipos de vehículo:</label>
+                    <div class="autos-opciones-inline">
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value=""> Todos</label>
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value="Auto"> Autos</label>
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value="Deportivo">
+                            Deportivos</label>
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value="Pick Up"> Pick Ups</label>
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value="SUV"> SUVs</label>
+                        <label><input type="radio" ng-model="busqueda.tipoVehiculo" value="Eléctrico">
+                            Eléctricos</label>
+                    </div>
+                </div>
+
+                <br>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-12 justify-content-center">
+                        <div class="card justify-content-center mx-2 my-2 card_list"
+                            ng-repeat="auto in autos | filter:filtroAutos" style="margin-left:auto;">
+                            <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
+                            <div class="card-body">
+                                <h5 class="card-title c-title-list">{{auto.modelo}}</h5>
+                                <p class="card-text c-list-txt">Características del vehículo:</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item item-txt">Marca: {{auto.marca}}</li>
+                                <li class="list-group-item item-txt">Color: {{auto.color}}</li>
+                                <li class="list-group-item item-txt">Año: {{auto.anio}}</li>
+                                <li class="list-group-item item-txt">Precio: {{auto.precio | currency:"MXN$"}}</li>
+                                <li class="list-group-item item-txt">Tipo: {{auto.tipo}}</li>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <footer class="footer-scott pt-5 pb-4 mt-5" style="margin:0">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Columna 1: Logo + Nombre -->
+                    <div class="col-md-3 mb-4 text-center text-md-start">
+                        <a href="./index.html"><img src="img/smlogo_small.png" class="footer-logo mb-2"
+                                alt="Scott Motors" width="70"></a>
+                        <h5 class="footer-title mt-2">Scott Motors</h5>
+                        </p>
+                    </div>
+
+                    <!-- Columna 2: Menú -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Menú</h5>
+                        <ul class="footer-links">
+                            <li><a href="./cars_list_test.html">Catálogo</a></li>
+                            <li><a href="./index.html#product_lines">Línea de Productos</a></li>
+                            <li><a href="./index.html#about_us">Sobre Nosotros</a></li>
+                            <li><a href="./index.html#mision-vision-valores">Nuestros Valores</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Redes sociales -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Síguenos</h5>
+                        <ul class="footer-social">
+                            <li><a href="https://www.facebook.com/share/1Cn1AuSspM/?mibextid=wwXIfr"><i
+                                        class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a
+                                    href="https://www.instagram.com/scottmotors_mexico/?igsh=MTkwenQzb3NiejN4MQ%3D%3D&utm_source=qr"><i
+                                        class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@scottmotors_mxico?_r=1&_t=ZS-91v1baXmYeC"><i
+                                        class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 4: Contacto -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Contacto</h5>
+                        <ul class="footer-info">
+                            <li>📞 55 0000 0000</li>
+                            <li>📧 contacto@scottmotors.com</li>
+                            <li>📍 CDMX, México</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider">
+
+                <p class="footer-copy text-center mt-3">
+                    © 2025 Scott Motors — Calidad y confianza en movimiento.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

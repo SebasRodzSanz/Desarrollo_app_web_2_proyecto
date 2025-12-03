@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html ng-app="ejemplosApp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Scoot Motors</title>
+</head>
+<!-- Incluir Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- <script src="./css/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script> -->
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!--INCLUIR LOGOS REDES SOCIALES-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Incluir AngularJS -->
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- Incluir Css -->
+<link rel="stylesheet" href="css/estilos.css">
+
+<!--   Incluir Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2">
+
+</head>
+
+<body>
+
+    <div ng-controller="mainCtrl">
+        <!--Aqui hice una modificacion porque al momento de contraer el menu en "hambuerguesa" no se distinguia ya que era del mismo color que el menú-->
+        <nav>
+            <nav class="navbar navbar-expand-lg navbar-dark bebas-neue-regular" style="font-size: 150%;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img class="logo_nav" src="img/smlogo_small.png" alt="logo">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+
+                        <!-- Menú principal -->
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./cars_list_test.html" style="color:white">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#product_lines" style="color:white">Líneas de
+                                    Autos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#about_us" style="color:white">Sobre
+                                    Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html#mision-vision-valores" style="color:white">
+                                    Nuestros Valores</a>
+                            </li>                            
+
+                        </ul>
+
+                        <!-- Contacto al extremo derecho -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link bebas-neue-regularcontacto" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalContacto">
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <!-- Modal Contacto (Propuesta 1)-->
+
+        <div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-contacto-dark">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contáctanos</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control input-dark" placeholder="Tu nombre completo">
+
+                            <label class="form-label mt-3">Teléfono</label>
+                            <input type="tel" class="form-control input-dark" placeholder="Ej. 55 1234 5678">
+
+                            <label class="form-label mt-3">Correo</label>
+                            <input type="email" class="form-control input-dark" placeholder="tucorreo@example.com">
+
+                            <label class="form-label mt-3">¿Qué deseas?</label>
+                            <select class="form-select input-dark">
+                                <option>Cita presencial</option>
+                                <option>Información de un vehículo</option>
+                                <option>Agendar cita para servicio</option>
+                            </select>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger w-100">Enviar solicitud</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <!-- Carrusel  -->
+            <div class="container-fluid p-0">
+
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <picture><!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_1.jpeg" media="(orientation: landscape)">
+                                    <source srcset="img/bm1.jpeg" media="(orientation: portrait)">
+                                    <img src="img/banner_1.jpeg" class="d-block w-100" alt="primero">
+                                </picture>
+
+
+                            </div>
+                            <div class="carousel-item">
+                                <picture> <!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_2.png" media="(orientation: landscape)">
+                                    <source srcset="img/bm2.png" media="(orientation: portrait)">
+                                    <img src="img/banner_2.png" class="d-block w-100" alt="segundo">
+                                </picture>
+
+                            </div>
+                            <div class="carousel-item">
+                                <picture> <!-- CON PICTURE SE CAMBIA LA IMAGEN DEPENDIENDO EL DISPOSITIVO -->
+                                    <source srcset="img/banner_3.jpeg" media="(orientation: landscape)">
+                                    <source srcset="img/bm3.jpeg" media="(orientation: portrait)">
+                                    <img src="img/banner_3.jpeg" class="d-block w-100" alt="tercero">
+                                </picture>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </header>
+
+        <article>
+
+            <!-- Carrusel de Autos Sebas  -->
+            <section id="product_lines" class="seccion-gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="gallery-title animar animate__animated">Cada camino comienza aquí</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Auto')" class="nav-link links-car">Autos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Eléctrico')" class="nav-link links-car">Eléctricos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Pick Up')" class="nav-link links-car">Pick ups</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('SUV')" class="nav-link links-car">SUVs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a ng-click="autoLinkClick('Deportivo')" class="nav-link links-car">Deportivos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="scroll-container">
+                                <div class="card mx-3 my-3" ng-repeat="auto in autosGaleria">
+                                    <img class="card-img-top" ng-src="{{auto.img}}" alt="auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title c-title">{{auto.modelo}}</h5>
+                                        <br>
+                                        <a href="#" class="links-info">Detalles del vehículo</a>
+                                        <a href="#" class="links-info">Cotizar</a>
+                                    </div>
+                                </div> <!-- fin del card-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- fin del listadoCtrl -->
+            </section>
+
+            <!-- Carrusel de Servicios Néstor -->
+            <section id="services"></section>
+            <section class="seccion-gallery mt-5">
+                <div class="container">
+
+                
+                <div class="row">
+                    <div class="col text-center">
+                    <h2 class="gallery-title">Servicios Profesionales</h2>
+                    </div>
+                </div>
+
+        
+        <div class="row">
+            <div class="col">
+                <div id="carouselServicios" class="carousel slide">
+                    
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0"
+                            class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <!-- Servicio 1 -->
+                        <div class="carousel-item active">
+                            <picture>
+                                <source srcset="img/s1c.jpg" media="(orientation: landscape)"> <!--compu -->
+                                <source srcset="img/s1m.jpg" media="(orientation: portrait)"> <!--cel -->
+                                <img src="img/s1c.jpg" class="d-block w-100" alt="Mantenimiento">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mantenimiento General</h5>
+                                <p>Revisión, cambio de aceite y afinación completa.</p>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 2 -->
+                        <div class="carousel-item">
+                            <picture>
+                                <source srcset="img/s2c.jpg" media="(orientation: landscape)">
+                                <source srcset="img/s2m.jpg" media="(orientation: portrait)">
+                                <img src="img/s2c.jpg" class="d-block w-100" alt="Limpieza">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Limpieza profunda</h5>
+                                <p>Limpieza profunda, pulido y detallado profesional.</p>
+                            </div>
+                        </div>
+
+                        <!-- Servicio 3 -->
+                        <div class="carousel-item">
+                            <picture>
+                                <source srcset="img/s3C.jpg" media="(orientation: landscape)">
+                                <source srcset="img/s3M.png" media="(orientation: portrait)">
+                                <img src="img/s3C.jpg" class="d-block w-100" alt="Restauración">
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: black !important;">Restauración de autos</h5>
+                                <p style="color: black !important;">Desde refacciones hasta carrocerías completas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+            </section>
+
+            <!-- Quienes somos Mariana -->
+            <section id="about_us">
+
+                <div class="container py-5">
+                    <div class="row">
+                        <h1 class="text-center titulo-abus bebas-neue-regular animar animate__animated">
+                            Sobre Nosotros
+                        </h1>
+                        <p class="open-sans-uniquifier descripcion-abus text-center">Scoot Motors nació con una idea
+                            sencilla: que cada persona pueda disfrutar de su automóvil como el primer día. Con el paso
+                            de los años, hemos crecido junto a nuestros clientes, quienes nos han impulsado a
+                            expandirnos y a perfeccionar cada servicio. Hoy, Scoot Motors es sinónimo de confianza y
+                            calidad, porque detrás de cada vehículo atendido hay una historia de dedicación, innovación
+                            y pasión por el mundo automotriz.</p>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 col-md-12 d-flex justify-content-center align-items-center sobre_nosotros">
+
+                            <img class="img_about_us img-fluid" src="img/about_us.png" alt="sobre_nosotros"
+                                style="  width: 100%;  height: 100vh;   ">
+
+                            <ol class="lista-tarjetas">
+                                <li>
+                                    <div class="tarjeta-lista">
+                                        <!-- <span class="numero-tarjeta">1</span> -->
+                                        <h3 class="roboto-uniquifier subtitulo-abus">Presencia Nacional Sólida</h3>
+                                        <p class="open-sans-uniquifier ">Contamos con más de 35 sucursales en todo
+                                            México, incluyendo CDMX, Guadalajara, Monterrey y Mérida, lo que nos
+                                            posiciona como una de las redes de servicio automotriz más accesibles del
+                                            país.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-lista">
+                                        <!-- <span class="numero-tarjeta">2</span> -->
+                                        <h3 class="roboto-uniquifier subtitulo-abus">Certificación de calidad
+                                            internacional</h3>
+                                        <p class="open-sans-uniquifier">Nuestros procesos de mantenimiento y
+                                            remodelación están avalados por la certificación ISO 9001:2015, garantizando
+                                            estándares de calidad, seguridad y eficiencia reconocidos a nivel mundial.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-lista">
+                                        <!-- <span class="numero-tarjeta">3</span> -->
+                                        <h3 class="roboto-uniquifier subtitulo-abus">Top 10 en ventas de autos
+                                            seminuevos</h3>
+                                        <p class="open-sans-uniquifier">En 2024, fuimos reconocidos por la Asociación
+                                            Mexicana de la Industria Automotriz (AMIA) como una de las 10 agencias con
+                                            mayor volumen de ventas de autos seminuevos en el país.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-lista">
+                                        <!--  <span class="numero-tarjeta">4</span> -->
+                                        <h3 class="roboto-uniquifier subtitulo-abus">Calificación destacada en redes
+                                            sociales</h3>
+                                        <p class="open-sans-uniquifier">Con más de 4.8 estrellas en Google Reviews y más
+                                            de 50,000 seguidores en Instagram, nuestros clientes nos recomiendan por la
+                                            atención personalizada y resultados impecables.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Misión, Visión y Valores Miguel -->
+            <section id="mision-vision-valores" class="seccion-mvv">
+                <div class="container">
+
+                    <div class="text-center mb-4">
+                        <h1 class="titulo-mvv bebas-neue-regular animar animate__animated">
+                            Misión, Visión y Valores
+                        </h1>
+                        <p class="open-sans-uniquifier text-black animar animate__animated">
+                            En Scott Motors nos especializamos en la venta de autos sedán, pickups, SUV’s y deportivos,
+                            además de brindar servicios de mantenimiento profesional a vehículos de todas las marcas y
+                            clases.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+
+                        <!-- Misión -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3 roboto-uniquifier">Misión</h4>
+                                    <p class="open-sans-uniquifier">
+                                        Ofrecer soluciones de movilidad confiables mediante la venta de vehículos de
+                                        calidad y servicios de mantenimiento profesional, brindando una experiencia
+                                        cercana, segura y transparente a cada cliente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visión -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3 roboto-uniquifier">Visión</h4>
+                                    <p class="open-sans-uniquifier">
+                                        Convertirnos en la agencia automotriz de referencia en la región, destacando por
+                                        nuestra atención al cliente, diversidad de autos sedán, pickups, SUV’s y
+                                        deportivos,
+                                        y un taller altamente especializado para todas las marcas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Valores -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card tarjeta-mvv h-100 animar animate__animated">
+                                <div class="card-body">
+                                    <h4 class="roboto-uniquifier text-center mb-3">Valores</h4>
+                                    <ul class="lista-valores open-sans-uniquifier">
+                                        <li><strong>Honestidad:</strong> transparencia total en precios y servicios.
+                                        </li>
+                                        <li><strong>Servicio al cliente:</strong> acompañamiento antes, durante y
+                                            después.</li>
+                                        <li><strong>Pasión por los autos:</strong> cuidado en cada detalle.</li>
+                                        <li><strong>Calidad:</strong> estándares altos en venta y mantenimiento.</li>
+                                        <li><strong>Trabajo en equipo:</strong> soluciones rápidas y efectivas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Botón para volver arriba -->
+            <button id="btnTop" class="btn-top">
+                ↑
+            </button>
+
+            <!--animacion para scroll de mision, vision y valores-->
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+
+                    const elementos = document.querySelectorAll(".animar");
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+
+                            // Si está visible en pantalla
+                            if (entry.isIntersecting) {
+
+                                // Quitar cualquier animación previa
+                                entry.target.classList.remove("animate__fadeInDown", "animate__zoomIn");
+
+                                // Forzar reflow para reiniciar animación
+                                void entry.target.offsetWidth;
+
+                                // Aplicar animación según el tipo de elemento
+                                if (entry.target.tagName === "H2") {
+                                    entry.target.classList.add("animate__fadeInDown");
+                                } else {
+                                    entry.target.classList.add("animate__zoomIn");
+                                }
+
+                            } else {
+                                // Cuando sale de pantalla, quitar animación
+                                entry.target.classList.remove("animate__fadeInDown", "animate__zoomIn");
+                            }
+
+                        });
+                    }, { threshold: 0.3 });
+
+                    elementos.forEach(el => observer.observe(el));
+
+                });
+            </script>
+
+            <script>
+                const btnTop = document.getElementById("btnTop");
+
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                        btnTop.style.display = "block";
+                    } else {
+                        btnTop.style.display = "none";
+                    }
+                };
+
+                btnTop.addEventListener("click", function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            </script>
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+    </div>
+</body>
+
+<footer class="footer-scott pt-5 pb-4 mt-5" style="margin:0">
+    <div class="container">
+        <div class="row">
+
+            <!-- Columna 1: Logo + Nombre -->
+            <div class="col-md-3 mb-4 text-center text-md-start">
+                <a href="./index.html"><img src="img/smlogo_small.png" class="footer-logo mb-2" alt="Scott Motors" width="70"></a>
+                <h5 class="footer-title mt-2">Scott Motors</h5>
+                </p>
+            </div>
+
+            <!-- Columna 2: Menú -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Menú</h5>
+                <ul class="footer-links">
+                    <li><a href="./cars_list_test.html">Catálogo</a></li>
+                    <li><a href="./index.html#product_lines">Línea de Productos</a></li>
+                    <li><a href="./index.html#about_us">Sobre Nosotros</a></li>      
+                    <li><a href="./index.html#mision-vision-valores">Nuestros Valores</a></li>                     
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Síguenos</h5>
+                <ul class="footer-social">
+                    <li><a href="https://www.facebook.com/share/1Cn1AuSspM/?mibextid=wwXIfr"><i
+                                class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a
+                            href="https://www.instagram.com/scottmotors_mexico/?igsh=MTkwenQzb3NiejN4MQ%3D%3D&utm_source=qr"><i
+                                class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@scottmotors_mxico?_r=1&_t=ZS-91v1baXmYeC"><i
+                                class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Contacto -->
+            <div class="col-md-3 mb-4">
+                <h5 class="footer-title">Contacto</h5>
+                <ul class="footer-info">
+                    <li>📞 55 0000 0000</li>
+                    <li>📧 contacto@scottmotors.com</li>
+                    <li>📍 CDMX, México</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <p class="footer-copy text-center mt-3">
+            © 2025 Scott Motors — Calidad y confianza en movimiento.
+        </p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,610 @@
+/* Estilos Generales */
+
+nav,
+#about_us,
+.carousel,
+.catalogo {
+    background:
+
+        linear-gradient(135deg,
+            #000814,
+            #1a2a40);
+
+    background-blend-mode: overlay;
+    color: white
+}
+
+nav .navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* justo en el borde inferior */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* altura del difuminado */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            /* empieza semi-transparente */
+            rgba(255, 0, 0, 0.319)
+            /* se desvanece a transparente */
+        );
+    pointer-events: none;
+}
+
+.card {
+    border-radius: 10px;
+    /* ajusta el valor según lo redondeado que quieras */
+}
+
+/* Estilos del Navar */
+
+nav.navbar {
+    position: relative;
+    /* mantiene la posición relativa */
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8),
+            rgba(29, 29, 29, 0.134),
+            rgba(0, 0, 0, 0.3))
+}
+
+.navbar .nav_link {
+    color: white;
+}
+
+.navbar li {
+    margin-right: 25px;
+    /* espacio entre cada link */
+    font-size: 30px;
+}
+
+.logo_nav {
+    width: 50%;
+}
+
+
+/* fuentes */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*NAVBAR CONTACTO*/
+.bebas-neue-regularcontacto {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f12525 !important;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+ */
+.roboto-uniquifier {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* // <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name */
+
+.open-sans-uniquifier {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* ===============================
+   SECCIÓN MISIÓN, VISIÓN Y VALORES
+   =============================== */
+
+.seccion-mvv {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.titulo-mvv {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.descripcion-mvv {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta-mvv {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background: whitesmoke;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-mvv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.subtitulo-mvv {
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.lista-valores {
+    padding-left: 20px;
+}
+
+.lista-valores li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE FORZADO */
+@media (max-width: 767.98px) {
+    #mision-vision-valores .col-12 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* TABLET: 2 columnas */
+@media (max-width: 991.98px) {
+    #mision-vision-valores .col-sm-6 {
+        width: 50%;
+    }
+}
+
+/* ===============================
+SECCIÓN ABOUT US 
+   =============================== */
+.titulo-abus {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 30px 0 40px 0;
+}
+
+.subtitulo-abus {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.lista-tarjetas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta-lista {
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+.numero-tarjeta {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 60px;
+    font-weight: bold;
+    /* z-index: 0; */
+}
+
+.tarjeta-lista h3,
+.tarjeta-lista p {
+    position: relative;
+    z-index: 1;
+}
+
+.tarjeta-lista:hover {
+    transform: translateY(-8px);
+    /* se levanta hacia arriba */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    /* sombra ligera */
+}
+
+
+.descripcion-abus {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 0 auto 50px auto;
+}
+
+/* RESPONSIVE FORZADO */
+
+/* Solo en orientación vertical (portrait) */
+@media screen and (orientation: portrait) {
+
+    .img_about_us {
+        margin: auto;
+    }
+
+    div .sobre_nosotros {
+        flex-direction: column;
+        /* apila imagen y tarjetas en vertical */
+        align-items: center;
+        object-fit: cover;
+        /* ajusta la imagen sin deformarla */
+
+    }
+
+    .lista-tarjetas {
+        display: block;
+        /* aparecen debajo de la imagen */
+        margin-top: 50px;
+        /* espacio entre imagen y tarjetas */
+    }
+}
+
+.img_about_us {
+    margin-right: 50px;
+}
+
+
+/*
+
+/* Boton scroll-to-top button */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    /* distancia desde el borde inferior */
+    right: 20px;
+    /* distancia desde el borde derecho */
+    background-color: #f12525;
+    /* azul oscuro metálico */
+    color: white;
+    border: none;
+    border-radius: 10%;
+    /* círculo */
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    /* oculto por defecto */
+    z-index: 1000;
+}
+
+
+/* =====================================
+   FOOTER SCOTT MOTORS — ROJO & BLANCO
+   Combinación de diseño minimalista + 4 columnas
+   ===================================== */
+
+.footer-scott::after {
+    content: "";
+    position: absolute;
+    bottom: 1;
+    /* justo en el borde inferior */
+    width: 100%;
+    height: 25px;
+    /* altura del difuminado */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            /* empieza semi-transparente */
+            rgba(255, 0, 0, 0.319)
+            /* se desvanece a transparente */
+        );
+    pointer-events: none;
+}
+
+.footer-scott {
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8),
+            rgba(29, 29, 29, 0.134),
+            rgba(0, 0, 0, 0.3)),
+        linear-gradient(135deg,
+            #000814,
+            #1a2a40);
+
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* LOGO */
+.footer-scott .footer-logo {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+}
+
+/* TITULOS */
+.footer-scott .footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+/* TEXTO */
+.footer-scott .footer-text {
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* LISTAS GENERALES */
+.footer-scott .footer-links,
+.footer-scott .footer-info,
+.footer-scott .footer-social {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-scott .footer-links li,
+.footer-scott .footer-info li,
+.footer-scott .footer-social li {
+    margin-bottom: 8px;
+}
+
+/* ENLACES */
+.footer-scott .footer-links a,
+.footer-scott .footer-social a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-scott .footer-links a:hover,
+.footer-scott .footer-social a:hover {
+    color: #D93030;
+    padding-left: 4px;
+}
+
+/* REDES SOCIALES (ICONOS) */
+.footer-scott .footer-social i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* DIVISOR */
+.footer-scott .footer-divider {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* COPYRIGHT */
+.footer-scott .footer-copy {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/*
+    Cars gallery horizontal 
+*/
+.seccion-gallery {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.gallery-title {
+    color: #000;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+.scroll-container {
+    background-color: #f9f9f9;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    scroll-behavior: smooth;
+    /*Ocultar el scrollbar horizontal*/
+    -ms-overflow-style: none;
+    /*IE y EDGE */
+    scrollbar-width: none;
+    /*FIREFOX  */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.card {
+    display: inline-block;
+}
+
+.links-car {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 7px;
+    color: #000;
+    border-bottom: #f9f9f9 7px solid;
+    background: #f9f9f9;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.links-car:hover {
+    border-bottom: #D93030 7px solid;
+    color: #D93030;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.links-info {
+    all: unset;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 20px;
+    padding: 5px;
+    color: #f12525;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.links-info:hover {
+    color: #D93030;
+    font-weight: bolder;
+}
+
+.c-title {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+}
+
+/*
+    List cars html
+*/
+@media screen and (orientation: portrait) {
+    .card .card_list {
+        display: block;
+        flex-direction: column;  
+        align-items: center;
+        object-fit: cover;  
+        margin-left: 90px;
+    }
+}
+
+.card_list {
+    display: inline-block;
+    width: 26rem;
+    background-color: #171C26;
+}
+
+.card_list:hover {
+    box-shadow: 0 8px 20px rgba(217, 48, 48, 0.70);
+    /* sombra ligera */
+}
+
+.card_list img {
+    width: 26rem;
+    height: 18rem;
+}
+
+.c-title-list {
+    color: #D93030;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Roboto", sans-serif;
+}
+
+.c-list-txt {
+    color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+}
+
+.item-txt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    color: #f9f9f9;
+
+    background: #171C26;
+    border-bottom: #171C26;
+}
+
+.item-txt:hover {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 5px solid #D93030;
+    cursor: pointer;
+}
+
+/* =======================
+   popup propuesta 1
+   ======================= */
+
+.modal-contacto-dark {
+    background-color: #171C26;
+    color: #FFFFFF;
+    border-radius: 12px;
+    border: 2px solid #D93030;
+}
+
+.modal-contacto-dark .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-dark {
+    background-color: #0f131a;
+    border: 1px solid #333;
+    color: #FFFFFF;
+}
+
+.input-dark:focus {
+    border-color: #D93030;
+    box-shadow: 0 0 5px #D93030;
+}
+
+.btn-danger {
+    background-color: #D93030 !important;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-danger:hover {
+    background-color: #b32525 !important;
+}
+
+.btn-close-white {
+    filter: invert(1);
+}
+
+/*
+    filters style
+*/
+.filtros-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.filtro-izq,
+.filtro-der {
+    width: 25%;
+}
+
+.filtro-centro {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio-botones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/*
+    misión, visión y valores forzado
+*/
+/* RESPONSIVE FORZADO */
+@media (max-width: 767.98px) {
+    #mision-vision-valores .col-12 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* TABLET: 2 columnas */
+@media (max-width: 991.98px) {
+    #mision-vision-valores .col-sm-6 {
+        width: 50%;
+    }
+}
